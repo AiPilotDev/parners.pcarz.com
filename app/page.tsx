@@ -1,9 +1,28 @@
-import { ArrowRight, BanknoteArrowDown, BriefcaseBusiness, Globe2, Handshake, ShieldCheck, Truck } from "lucide-react";
+import {
+  ArrowRight,
+  BanknoteArrowDown,
+  BriefcaseBusiness,
+  Globe2,
+  Handshake,
+  ShieldCheck,
+  Truck,
+} from "lucide-react";
 
 import { AnimatedSection } from "@/components/landing/animated-section";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const trustItems = [
   "Локальный бренд партнера, а не чужая витрина",
@@ -35,7 +54,7 @@ const processSteps = [
   {
     title: "Подключение инфраструктуры",
     description:
-      "Fluxcars закрывает платформу, каталог, платежную модель и логистический контур поставки.",
+      "pСarz закрывает платформу, каталог, платежную модель и логистический контур поставки.",
   },
   {
     title: "Выход в продажи",
@@ -89,7 +108,7 @@ const advantages = [
 
 const faqs = [
   {
-    question: "Чем модель Fluxcars отличается от обычной франшизы?",
+    question: "Чем модель pСarz отличается от обычной франшизы?",
     answer:
       "Это не просто передача названия и шаблонного сайта. Партнер получает живую платформу, обновления, платежную и логистическую инфраструктуру, а также основу для устойчивого локального бизнеса.",
   },
@@ -117,9 +136,11 @@ export default function HomePage() {
         <header className="mb-10 flex items-center justify-between border-b border-black/8 py-4">
           <div>
             <p className="font-sans text-xs uppercase tracking-[0.35em] text-muted-foreground">
-              Fluxcars Partners
+              pСarz Partners
             </p>
-            <p className="mt-2 text-sm text-black/70">Инфраструктура для локального авто-бизнеса</p>
+            <p className="mt-2 text-sm text-black/70">
+              Инфраструктура для локального авто-бизнеса
+            </p>
           </div>
           <Button variant="secondary" asChild>
             <a href="#cta">Обсудить запуск</a>
@@ -135,7 +156,7 @@ export default function HomePage() {
               Готовая платформа для продажи автомобилей из Китая под брендом вашего рынка.
             </h1>
             <p className="mt-8 max-w-2xl font-sans text-lg leading-8 text-muted-foreground">
-              Fluxcars берет на себя технологию, обновления, платежную инфраструктуру и логистику.
+              pСarz берет на себя технологию, обновления, платежную инфраструктуру и логистику.
               Партнер строит локальный бренд, управляет продажами и растит спрос там, где знает рынок лучше всех.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -205,7 +226,9 @@ export default function HomePage() {
 
           <Card className="bg-[#191919] text-white">
             <CardHeader>
-              <CardDescription className="uppercase tracking-[0.22em] text-white/55">Решение Fluxcars</CardDescription>
+              <CardDescription className="uppercase tracking-[0.22em] text-white/55">
+                Решение pСarz
+              </CardDescription>
               <CardTitle className="text-3xl">
                 Партнер получает не шаблон, а работающую операционную основу для продаж на своем рынке.
               </CardTitle>
@@ -249,8 +272,8 @@ export default function HomePage() {
               Модель создана для тех, кто силен в локальном рынке, но не хочет строить международную систему самостоятельно.
             </h2>
             <p className="mt-6 max-w-xl font-sans text-base leading-8 text-muted-foreground">
-              Предприниматели, локальные продавцы, маркетинговые команды и компании, которые хотят быстро
-              войти в нишу автомобилей из Китая, получают основу для уверенного запуска и роста.
+              Предприниматели, локальные продавцы, маркетинговые команды и компании, которые хотят быстро войти
+              в нишу автомобилей из Китая, получают основу для уверенного запуска и роста.
             </p>
           </div>
           <div className="grid gap-5">
@@ -270,18 +293,21 @@ export default function HomePage() {
         <AnimatedSection className="py-10" delay={0.24}>
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
-              <p className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">Ключевые преимущества</p>
+              <p className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Ключевые преимущества
+              </p>
               <h2 className="mt-4 text-4xl tracking-[-0.03em] sm:text-5xl">
                 Все, что замедляет старт с нуля, уже вынесено из вашей критической зоны риска.
               </h2>
             </div>
             <p className="max-w-lg font-sans text-sm leading-7 text-muted-foreground">
-              Fluxcars позволяет сфокусироваться на том, что приносит выручку: маркетинге, переговорах, сделках и развитии бренда.
+              pСarz позволяет сфокусироваться на том, что приносит выручку: маркетинге, переговорах, сделках и развитии бренда.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {advantages.map((item) => {
               const Icon = item.icon;
+
               return (
                 <Card key={item.title}>
                   <CardHeader>
@@ -322,9 +348,11 @@ export default function HomePage() {
           <Card className="overflow-hidden bg-[#111111] text-white">
             <div className="grid gap-8 p-8 lg:grid-cols-[1fr_auto] lg:items-end lg:p-12">
               <div className="max-w-3xl">
-                <p className="font-sans text-xs uppercase tracking-[0.3em] text-white/50">Финальный акцент</p>
+                <p className="font-sans text-xs uppercase tracking-[0.3em] text-white/50">
+                  Финальный акцент
+                </p>
                 <h2 className="mt-4 text-4xl tracking-[-0.03em] sm:text-5xl">
-                  Запускать авто-бизнес с нуля долго, дорого и рискованно. С Fluxcars быстрее, спокойнее и системнее.
+                  Запускать авто-бизнес с нуля долго, дорого и рискованно. С pСarz быстрее, спокойнее и системнее.
                 </h2>
                 <p className="mt-6 max-w-2xl font-sans text-base leading-8 text-white/70">
                   Вы получаете не просто сайт, а рабочую платформу для старта и роста на своем рынке. Мы закрываем основу.
@@ -333,13 +361,13 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col gap-4">
                 <Button size="lg" className="bg-[#c6a972] text-black hover:bg-[#d2b57f]" asChild>
-                  <a href="mailto:partners@fluxcars.com">
-                    Связаться с Fluxcars
+                  <a href="mailto:partners@pcarz.com">
+                    Связаться с pСarz
                     <ArrowRight className="size-4" />
                   </a>
                 </Button>
                 <p className="font-sans text-xs uppercase tracking-[0.2em] text-white/45">
-                  partners@fluxcars.com
+                  partners@pcarz.com
                 </p>
               </div>
             </div>

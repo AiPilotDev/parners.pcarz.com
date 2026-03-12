@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fluxcars Partners",
+  title: "pСarz Partners",
   description:
     "Премиальная партнерская платформа для запуска локального бизнеса по продаже автомобилей из Китая под брендом партнера.",
 };
