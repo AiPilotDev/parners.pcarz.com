@@ -333,7 +333,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between rounded-[28px] border border-blue-100 bg-white/80 px-5 py-4">
                 <div>
                   <p className="text-xs font-semibold tracking-[0.22em] text-blue-700 uppercase">Launch stack</p>
-                  <p className="mt-2 text-xl font-semibold text-slate-950">Сайт, каталог, логистика</p>
+                  <p className="mt-2 text-xl font-semibold text-slate-950">Схема бизнеса, вебсайт, логистика</p>
                 </div>
                 <div className="rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white">B2B</div>
               </div>
@@ -342,7 +342,7 @@ export default function HomePage() {
                 {[
                   "Сайт, адаптированный под ваш рынок",
                   "Каталог автомобилей из Китая",
-                  "Google Ads и интеграция с CRM",
+                  "Подключение инструментов для лидогенерации и рекламы",
                   "Международная логистика и доставка",
                 ].map((item) => (
                   <div
