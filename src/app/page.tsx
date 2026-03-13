@@ -3,15 +3,21 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
+  BriefcaseBusiness,
   Building2,
   CarFront,
   Check,
   ChevronRight,
+  Database,
   Globe,
   Mail,
+  Megaphone,
   PhoneCall,
+  Search,
+  Settings2,
   ShieldCheck,
   Sparkles,
+  TrendingUp,
 } from "lucide-react";
 
 import { AnimatedSection } from "@/components/landing/animated-section";
@@ -146,24 +152,34 @@ const audienceBullets = [
 
 const steps = [
   {
-    title: "Обсуждаем ваш рынок",
-    text: "Определяем страну, язык, позиционирование и формат запуска.",
+    title: "Изучаем ваш рынок и формат запуска",
+    text: "Определяем, как лучше запустить проект именно в вашей стране: язык сайта, подачу, модель работы с клиентами и формат продвижения.",
+    icon: Search,
   },
   {
     title: "Подготавливаем инфраструктуру",
-    text: "Запускаем сайт, подключаем корпоративную почту, CRM и рекламную основу.",
+    text: "Запускаем сайт, подключаем корпоративную почту, CRM и базовые инструменты для обработки заявок.",
+    icon: Settings2,
   },
   {
-    title: "Открываем проект для клиентов",
-    text: "На вашем сайте появляется большой каталог автомобилей с китайского рынка.",
+    title: "Наполняем сайт каталогом автомобилей",
+    text: "Размещаем на сайте десятки тысяч предложений с китайского рынка. Обновление и актуализацию каталога берём на себя.",
+    icon: Database,
   },
   {
-    title: "Запускаем продвижение",
-    text: "Вы начинаете привлекать клиентов, а мы поддерживаем техническую и операционную часть.",
+    title: "Подключаем привлечение клиентов",
+    text: "Помогаем запустить продвижение на вашем рынке и поддерживаем техническую и операционную часть проекта.",
+    icon: Megaphone,
   },
   {
-    title: "Масштабируем продажи",
-    text: "По мере роста заявок вы усиливаете локальное присутствие, не перестраивая платформу заново.",
+    title: "Выходите на продажи и начинаете зарабатывать",
+    text: "Вы обрабатываете обращения, консультируете клиентов, сопровождаете сделки и получаете прибыль от продаж автомобилей на своём рынке.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Развиваете готовую бизнес-модель",
+    text: "По мере роста спроса вы масштабируете продажи и укрепляете своё присутствие на рынке, опираясь на уже готовую инфраструктуру FluxCars.",
+    icon: BriefcaseBusiness,
   },
 ];
 
@@ -284,7 +300,7 @@ export default function HomePage() {
                 Запустите свой авто-бизнес на базе FluxCars
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
-                Готовый сайт на вашем языке, десятки тысяч предложений с китайского рынка, обновление каталога,
+                Готовый сайт на вашем языке, десятки тысяч автомобилей из Китая, обновление каталога,
                 международная доставка, платежная инфраструктура, Google Ads, корпоративная почта и интеграция с CRM.
               </p>
             </div>
@@ -317,17 +333,17 @@ export default function HomePage() {
               <div className="flex items-center justify-between rounded-[28px] border border-blue-100 bg-white/80 px-5 py-4">
                 <div>
                   <p className="text-xs font-semibold tracking-[0.22em] text-blue-700 uppercase">Launch stack</p>
-                  <p className="mt-2 text-xl font-semibold text-slate-950">Платформа, каталог, логистика</p>
+                  <p className="mt-2 text-xl font-semibold text-slate-950">Сайт, каталог, логистика</p>
                 </div>
                 <div className="rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white">B2B</div>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
-                  "Сайт под ваш рынок",
-                  "Каталог с китайского рынка",
-                  "Google Ads и CRM",
-                  "Международная доставка",
+                  "Сайт, адаптированный под ваш рынок",
+                  "Каталог автомобилей из Китая",
+                  "Google Ads и интеграция с CRM",
+                  "Международная логистика и доставка",
                 ].map((item) => (
                   <div
                     key={item}
@@ -343,7 +359,9 @@ export default function HomePage() {
 
               <div className="rounded-[28px] bg-slate-950 p-6 text-white">
                 <p className="text-sm font-semibold tracking-[0.22em] text-blue-200 uppercase">Эксклюзив на страну</p>
-                <p className="mt-3 text-2xl leading-tight font-semibold">Один партнёр на один рынок и готовая база для роста.</p>
+                <p className="mt-3 text-2xl leading-tight font-semibold">
+                  Один партнёр в одной стране, без внутренней конкуренции и с готовой базой для роста.
+                </p>
               </div>
             </div>
           </AnimatedSection>
@@ -462,16 +480,33 @@ export default function HomePage() {
 
       <AnimatedSection className="container-shell section-space">
         <SectionHeading eyebrow="Этапы запуска" title="Как запускается партнёрский проект" />
-        <div className="mt-12 grid gap-5 lg:grid-cols-5">
-          {steps.map((step, index) => (
-            <div key={step.title} className="premium-panel flex h-full flex-col p-6">
-              <div className="mb-6 flex size-12 items-center justify-center rounded-2xl bg-blue-700 text-lg font-semibold text-white">
-                {index + 1}
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {steps.map((step) => {
+            const StepIcon = step.icon;
+
+            return (
+            <div
+              key={step.title}
+              className="group relative overflow-hidden rounded-[30px] border border-blue-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(239,246,255,0.92)_100%)] p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(21,93,252,0.16)] sm:p-7"
+            >
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.2),transparent_62%)]" />
+              <div className="relative flex h-full flex-col">
+                <div className="mb-5 flex items-center justify-between gap-4">
+                  <div className="flex size-14 items-center justify-center rounded-2xl border border-white/70 bg-white text-blue-700 shadow-[0_12px_30px_rgba(59,130,246,0.14)]">
+                    <StepIcon className="size-6" />
+                  </div>
+                  <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[11px] font-semibold tracking-[0.18em] text-blue-700 uppercase">
+                    Шаг запуска
+                  </span>
+                </div>
+                <h3 className="max-w-sm text-2xl leading-tight font-semibold text-slate-950">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-slate-600">{step.text}</p>
               </div>
-              <h3 className="text-2xl leading-tight font-semibold text-slate-950">{step.title}</h3>
-              <p className="mt-4 text-base leading-7 text-slate-600">{step.text}</p>
             </div>
-          ))}
+            );
+          })}
         </div>
       </AnimatedSection>
 
