@@ -7,11 +7,11 @@ import {
   Building2,
   CarFront,
   Check,
-  ChevronRight,
   Database,
   Globe,
   Mail,
   Megaphone,
+  Plane,
   PhoneCall,
   Search,
   Settings2,
@@ -31,7 +31,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "FluxCars | Партнерская модель для запуска авто-бизнеса",
+  title: "FluxCars | Партнерская модель для запуска автобизнеса",
   description:
     "Запустите локальный бизнес по продаже автомобилей из Китая на базе FluxCars: сайт, каталог, логистика, платежная инфраструктура, Google Ads и CRM.",
 };
@@ -47,8 +47,35 @@ const navItems = [
 const heroBullets = [
   "Десятки тысяч авто на вашем сайте",
   "Доставка в любую точку мира",
-  "Один партнёр на одну страну",
+  "Один партнёр на вашу страну",
   "Без затрат в сотни тысяч долларов на запуск с нуля",
+];
+
+const launchStackItems = [
+  {
+    title: "Сайт, адаптированный под ваш рынок",
+    icon: Globe,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_24px_rgba(170,120,30,0.2)]",
+  },
+  {
+    title: "Каталог автомобилей из Китая",
+    icon: CarFront,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_24px_rgba(35,72,166,0.2)]",
+  },
+  {
+    title: "Подключение инструментов для лидогенерации и рекламы",
+    icon: Megaphone,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_24px_rgba(26,122,77,0.2)]",
+  },
+  {
+    title: "Международная логистика и доставка",
+    icon: Plane,
+    iconWrapClass:
+      "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_24px_rgba(51,65,85,0.2)]",
+  },
 ];
 
 const benefitCards = [
@@ -297,7 +324,7 @@ export default function HomePage() {
             <span className="eyebrow">Премиальная B2B-платформа для автобизнеса</span>
             <div className="space-y-6">
               <h1 className="max-w-4xl text-5xl leading-[0.98] font-semibold text-slate-950 sm:text-6xl lg:text-7xl">
-                Запустите свой авто-бизнес на базе FluxCars
+                Запустите свой автобизнес на базе FluxCars
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
                 Готовый сайт на вашем языке, десятки тысяч автомобилей из Китая, обновление каталога,
@@ -339,20 +366,15 @@ export default function HomePage() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  "Сайт, адаптированный под ваш рынок",
-                  "Каталог автомобилей из Китая",
-                  "Подключение инструментов для лидогенерации и рекламы",
-                  "Международная логистика и доставка",
-                ].map((item) => (
+                {launchStackItems.map(({ title, icon: Icon, iconWrapClass }) => (
                   <div
-                    key={item}
-                    className="rounded-[24px] border border-white/80 bg-white/88 p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+                    key={title}
+                    className="rounded-[24px] border border-white/90 bg-[linear-gradient(170deg,rgba(255,255,255,0.98)_0%,rgba(245,248,255,0.9)_100%)] p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
                   >
-                    <div className="mb-4 flex size-11 items-center justify-center rounded-2xl bg-slate-950 text-white">
-                      <ChevronRight className="size-5" />
+                    <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
+                      <Icon className="size-5" />
                     </div>
-                    <p className="text-base leading-7 font-medium text-slate-900">{item}</p>
+                    <p className="text-base leading-7 font-medium text-slate-900">{title}</p>
                   </div>
                 ))}
               </div>
@@ -452,7 +474,7 @@ export default function HomePage() {
         <div className="premium-panel grid gap-10 overflow-hidden p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
           <div className="space-y-6">
             <span className="eyebrow">Эксклюзивность</span>
-            <h2 className="section-title">Один партнёр на одну страну</h2>
+            <h2 className="section-title">Один партнёр на вашу страну</h2>
             <p className="section-copy">
               Мы не продаём одну и ту же модель нескольким игрокам внутри одного рынка. На одну страну — один партнёр
               FluxCars.
@@ -548,7 +570,7 @@ export default function HomePage() {
                 Финальный шаг
               </span>
               <h2 className="max-w-4xl text-4xl leading-[1.02] font-semibold sm:text-5xl lg:text-6xl">
-                Запустите свой авто-бизнес на базе FluxCars
+                Запустите свой автобизнес на базе FluxCars
               </h2>
               <p className="max-w-3xl text-base leading-8 text-blue-50/88 sm:text-lg">
                 Получите сайт на нужном языке, десятки тысяч предложений с китайского рынка, обновляемый каталог,
@@ -562,7 +584,7 @@ export default function HomePage() {
                 сосредоточьтесь на продажах.
               </p>
               <p className="text-lg leading-8 font-medium text-blue-100">
-                Один партнёр на одну страну. Количество мест ограничено.
+                Один партнёр на вашу страну. Количество мест ограничено.
               </p>
               <Button asChild size="lg" className="bg-white px-8 text-slate-950 hover:bg-blue-50">
                 <Link href="#contacts">Получить условия партнёрства</Link>
