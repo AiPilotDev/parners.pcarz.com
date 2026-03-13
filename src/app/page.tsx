@@ -223,11 +223,31 @@ const reasons = [
   },
 ];
 
-const exclusivityBullets = [
-  "отсутствие внутренней конкуренции внутри сети",
-  "эксклюзив на рынок",
-  "смысл инвестировать в продвижение и бренд",
-  "ограниченное количество партнёрских мест",
+const exclusivityItems = [
+  {
+    title: "Отсутствие внутренней конкуренции внутри сети",
+    icon: ShieldCheck,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
+  },
+  {
+    title: "Эксклюзив на рынок",
+    icon: BadgeCheck,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
+  },
+  {
+    title: "Смысл инвестировать в продвижение и бренд",
+    icon: TrendingUp,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
+  },
+  {
+    title: "Ограниченное количество партнёрских мест",
+    icon: Sparkles,
+    iconWrapClass:
+      "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
+  },
 ];
 
 const audienceBullets = [
@@ -571,9 +591,15 @@ export default function HomePage() {
             <p className="text-lg leading-8 font-medium text-blue-700">Количество мест ограничено географией.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {exclusivityBullets.map((item) => (
-              <div key={item} className="rounded-[28px] border border-blue-100 bg-blue-50/70 p-6">
-                <p className="text-lg leading-8 font-medium text-slate-900">{item}</p>
+            {exclusivityItems.map(({ title, icon: Icon, iconWrapClass }) => (
+              <div
+                key={title}
+                className="rounded-[28px] border border-white/90 bg-[linear-gradient(165deg,rgba(255,255,255,0.98)_0%,rgba(244,248,255,0.9)_100%)] p-6 shadow-[0_18px_48px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
+                  <Icon className="size-5" />
+                </div>
+                <p className="text-lg leading-8 font-medium text-slate-900">{title}</p>
               </div>
             ))}
           </div>
