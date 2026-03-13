@@ -294,7 +294,7 @@ export default function HomePage() {
       <section id="top" className="container-shell section-space pt-14 sm:pt-20 lg:pt-24">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           <AnimatedSection className="space-y-8">
-            <span className="eyebrow">Премиальная B2B-платформа для локальных рынков</span>
+            <span className="eyebrow">Премиальная B2B-платформа для автобизнеса</span>
             <div className="space-y-6">
               <h1 className="max-w-4xl text-5xl leading-[0.98] font-semibold text-slate-950 sm:text-6xl lg:text-7xl">
                 Запустите свой авто-бизнес на базе FluxCars
