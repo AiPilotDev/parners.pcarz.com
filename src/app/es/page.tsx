@@ -36,47 +36,47 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "FluxCars | Partnership model to launch an auto business",
+  title: "FluxCars | Modelo de alianza para lanzar un negocio automotriz",
   description:
-    "Launch a local business selling cars from China on top of FluxCars: website, catalog, logistics, payment infrastructure, Google Ads, and CRM.",
+    "Lanza un negocio local de venta de autos desde China con FluxCars: website, catálogo, logística, infraestructura de pagos, Google Ads y CRM.",
 };
 
 const navItems = [
-  { label: "Benefits", href: "#benefits" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Who it’s for", href: "#for-whom" },
+  { label: "Beneficios", href: "#benefits" },
+  { label: "Cómo funciona", href: "#how-it-works" },
+  { label: "Para quién", href: "#for-whom" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contacts" },
+  { label: "Contacto", href: "#contacts" },
 ];
 
 const heroBullets = [
-  "Tens of thousands of cars on your website",
-  "Delivery anywhere in the world",
-  "One exclusive partner per country",
-  "No six-figure launch costs from scratch",
+  "Decenas de miles de autos en tu website",
+  "Entrega a cualquier parte del mundo",
+  "Un socio exclusivo por país",
+  "Sin costos de lanzamiento de seis cifras",
 ];
 
 const launchStackItems = [
   {
-    title: "Website tailored to your market",
+    title: "Website adaptada a tu mercado",
     icon: Globe,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_24px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Vehicle catalog from China",
+    title: "Catálogo de vehículos desde China",
     icon: CarFront,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_24px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "Lead generation and advertising tools",
+    title: "Herramientas de generación de leads y publicidad",
     icon: Megaphone,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_24px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "International logistics and delivery",
+    title: "Logística y entrega internacional",
     icon: Plane,
     iconWrapClass:
       "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_24px_rgba(51,65,85,0.2)]",
@@ -85,80 +85,80 @@ const launchStackItems = [
 
 const benefitCards = [
   {
-    title: "Launch-ready website for your market",
-    text: "We launch a website in the right language, tailored to your country and audience.",
+    title: "Website lista para tu mercado",
+    text: "Lanzamos una website en el idioma correcto, adaptada a tu país y audiencia.",
     icon: Globe,
   },
   {
-    title: "Tens of thousands of listings from China",
-    text: "Your website features tens of thousands of current vehicle offers. We handle catalog updates and maintenance.",
+    title: "Decenas de miles de ofertas desde China",
+    text: "Tu website muestra decenas de miles de ofertas actuales. Nosotros gestionamos la actualización del catálogo.",
     icon: CarFront,
   },
   {
-    title: "Delivery anywhere in the world",
-    text: "We manage international logistics and organize vehicle delivery worldwide.",
+    title: "Entrega a cualquier parte del mundo",
+    text: "Gestionamos la logística internacional y organizamos la entrega de vehículos en todo el mundo.",
     icon: Globe,
   },
   {
-    title: "Payment infrastructure",
-    text: "We help build a working model for international settlements with clients.",
+    title: "Infraestructura de pagos",
+    text: "Ayudamos a construir un esquema operativo de pagos internacionales con clientes.",
     icon: ShieldCheck,
   },
   {
-    title: "Corporate email setup",
-    text: "We set up corporate email on your domain so the project looks like a full business from day one.",
+    title: "Correo corporativo",
+    text: "Configuramos el correo corporativo en tu dominio para que el proyecto se vea profesional desde el día uno.",
     icon: Mail,
   },
   {
-    title: "Google Ads setup and management",
-    text: "We launch and manage Google campaigns so you start getting inquiries faster.",
+    title: "Configuración y gestión de Google Ads",
+    text: "Lanzamos y gestionamos campañas en Google para que empieces a recibir consultas antes.",
     icon: Sparkles,
   },
   {
-    title: "CRM integration",
-    text: "We connect the platform to your CRM so leads and deals go straight into your system.",
+    title: "Integración con CRM",
+    text: "Conectamos la plataforma con tu CRM para que los leads y ventas entren directamente a tu sistema.",
     icon: Building2,
   },
   {
-    title: "Technical support and updates",
-    text: "We maintain and evolve the platform. You don’t need to keep a dev team.",
+    title: "Soporte técnico y actualizaciones",
+    text: "Mantenemos y evolucionamos la plataforma. No necesitas un equipo de desarrollo propio.",
     icon: BadgeCheck,
   },
 ];
 
 const fluxCarsResponsibilities = [
   {
-    title: "Provides the website and platform",
+    title: "Aporta la website y la plataforma",
     icon: Building2,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Publishes and updates the catalog",
+    title: "Publica y actualiza el catálogo",
     icon: Database,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "Maintains and develops the system",
+    title: "Mantiene y desarrolla el sistema",
     icon: BadgeCheck,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "Helps with payment infrastructure",
+    title: "Ayuda con la infraestructura de pagos",
     icon: ShieldCheck,
     iconWrapClass:
       "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
   },
   {
-    title: "Organizes international logistics and delivery",
+    title: "Organiza la logística y la entrega internacional",
     icon: Plane,
     iconWrapClass:
       "border border-[#cde8f8] bg-[linear-gradient(145deg,#f0faff_0%,#d9f0ff_100%)] text-[#145587] shadow-[0_10px_22px_rgba(20,85,135,0.2)]",
   },
   {
-    title: "Connects email, ads, and CRM",
+    title: "Conecta email, publicidad y CRM",
     icon: Mail,
     iconWrapClass:
       "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
@@ -167,37 +167,37 @@ const fluxCarsResponsibilities = [
 
 const partnerResponsibilities = [
   {
-    title: "Promotes the project in its market",
+    title: "Promueve el proyecto en su mercado",
     icon: Megaphone,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Handles inbound inquiries",
+    title: "Gestiona las consultas entrantes",
     icon: PhoneCall,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "Consults customers",
+    title: "Asesora a los clientes",
     icon: Sparkles,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "Supports the buyer",
+    title: "Acompaña al comprador",
     icon: ShieldCheck,
     iconWrapClass:
       "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
   },
   {
-    title: "Builds the local brand",
+    title: "Desarrolla la marca local",
     icon: Globe,
     iconWrapClass:
       "border border-[#cde8f8] bg-[linear-gradient(145deg,#f0faff_0%,#d9f0ff_100%)] text-[#145587] shadow-[0_10px_22px_rgba(20,85,135,0.2)]",
   },
   {
-    title: "Grows sales and scales the business",
+    title: "Impulsa ventas y escala el negocio",
     icon: TrendingUp,
     iconWrapClass:
       "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
@@ -206,29 +206,29 @@ const partnerResponsibilities = [
 
 const reasons = [
   {
-    title: "A web platform to launch",
-    text: "From day one you enter the market with a tech platform and a large selection of vehicles.",
+    title: "Una plataforma web para lanzar",
+    text: "Desde el día uno entras al mercado con una plataforma tecnológica y una gran selección de vehículos.",
     icon: Building2,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "A ready-to-run foundation",
-    text: "You get a working system: website, logistics, payment infrastructure, advertising, and CRM integration.",
+    title: "Una base lista para operar",
+    text: "Obtienes un sistema completo: website, logística, infraestructura de pagos, publicidad e integración con CRM.",
     icon: Database,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "Focus on sales, not tech",
-    text: "To enter the market, you don’t need to build development, integrations, and operations on your own.",
+    title: "Enfócate en ventas, no en tecnología",
+    text: "Para entrar al mercado no necesitas crear desarrollo, integraciones y operaciones por tu cuenta.",
     icon: Settings2,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "Grow your own brand",
-    text: "Over time you build a local brand, traffic, CRM, lead base, and recognition in your market.",
+    title: "Haz crecer tu propia marca",
+    text: "Con el tiempo construyes marca local, tráfico, CRM, base de leads y reconocimiento en tu mercado.",
     icon: TrendingUp,
     iconWrapClass:
       "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
@@ -237,25 +237,25 @@ const reasons = [
 
 const exclusivityItems = [
   {
-    title: "No internal competition within the network",
+    title: "Sin competencia interna en la red",
     icon: ShieldCheck,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Market exclusivity",
+    title: "Exclusividad por mercado",
     icon: BadgeCheck,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "A clear incentive to invest in brand and promotion",
+    title: "Un incentivo claro para invertir en marca y promoción",
     icon: TrendingUp,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "Limited number of partner slots",
+    title: "Número limitado de cupos",
     icon: Sparkles,
     iconWrapClass:
       "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
@@ -264,31 +264,31 @@ const exclusivityItems = [
 
 const audienceItems = [
   {
-    title: "Entrepreneurs who want to enter the China-car niche quickly",
+    title: "Emprendedores que quieren entrar rápido en el nicho de autos desde China",
     icon: BriefcaseBusiness,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Local dealers and companies with sales experience",
+    title: "Vendedores locales y empresas con experiencia en ventas",
     icon: Building2,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "Marketing teams that know how to generate leads",
+    title: "Equipos de marketing que saben generar leads",
     icon: Megaphone,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "Those who want to launch an auto project without complex in-house development",
+    title: "Quienes quieren lanzar un proyecto automotriz sin desarrollo interno complejo",
     icon: Settings2,
     iconWrapClass:
       "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
   },
   {
-    title: "Those who know their market and want to build a strong local brand",
+    title: "Quienes conocen su mercado y quieren construir una marca local fuerte",
     icon: Globe,
     iconWrapClass:
       "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
@@ -297,70 +297,70 @@ const audienceItems = [
 
 const steps = [
   {
-    title: "We analyze your market and launch format",
-    text: "We define the best way to launch in your country: website language, positioning, customer model, and promotion.",
+    title: "Analizamos tu mercado y el formato de lanzamiento",
+    text: "Definimos la mejor forma de lanzar en tu país: idioma de la website, posicionamiento, modelo de cliente y promoción.",
     icon: Search,
   },
   {
-    title: "We prepare the infrastructure",
-    text: "We launch the website, connect corporate email, CRM, and core tools for handling inquiries.",
+    title: "Preparamos la infraestructura",
+    text: "Lanzamos la website, conectamos correo corporativo, CRM y herramientas clave para gestionar consultas.",
     icon: Settings2,
   },
   {
-    title: "We populate the catalog",
-    text: "We list tens of thousands of offers from the Chinese market and keep the catalog updated.",
+    title: "Poblamos el catálogo",
+    text: "Publicamos decenas de miles de ofertas del mercado chino y mantenemos el catálogo actualizado.",
     icon: Database,
   },
   {
-    title: "We enable customer acquisition",
-    text: "We help launch promotion in your market and support the technical and operational side of the project.",
+    title: "Activamos la captación de clientes",
+    text: "Ayudamos a lanzar la promoción en tu mercado y apoyamos la parte técnica y operativa del proyecto.",
     icon: Megaphone,
   },
   {
-    title: "You start selling and earning",
-    text: "You handle inquiries, consult customers, support deals, and earn from vehicle sales in your market.",
+    title: "Empiezas a vender y generar ingresos",
+    text: "Gestionas las consultas, asesoras clientes, acompañas las ventas y generas ingresos en tu mercado.",
     icon: TrendingUp,
   },
   {
-    title: "You scale a ready business model",
-    text: "As demand grows, you scale sales and strengthen your market presence using FluxCars infrastructure.",
+    title: "Escalas un modelo de negocio listo",
+    text: "A medida que crece la demanda, escalas ventas y refuerzas tu presencia usando la infraestructura de FluxCars.",
     icon: BriefcaseBusiness,
   },
 ];
 
 const clientValueItems = [
   {
-    title: "Vehicle technical inspection",
+    title: "Inspección técnica del vehículo",
     icon: ShieldCheck,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Direct access to the Chinese auto market",
+    title: "Acceso directo al mercado automotriz chino",
     icon: Globe,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
-    title: "Local communication and support",
+    title: "Comunicación y acompañamiento local",
     icon: PhoneCall,
     iconWrapClass:
       "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
-    title: "A clear purchase process",
+    title: "Un proceso de compra claro",
     icon: BadgeCheck,
     iconWrapClass:
       "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
   },
   {
-    title: "Support with payment and delivery",
+    title: "Apoyo con pago y entrega",
     icon: Plane,
     iconWrapClass:
       "border border-[#cde8f8] bg-[linear-gradient(145deg,#f0faff_0%,#d9f0ff_100%)] text-[#145587] shadow-[0_10px_22px_rgba(20,85,135,0.2)]",
   },
   {
-    title: "Access to international supply via a local service",
+    title: "Acceso a suministro internacional vía un servicio local",
     icon: Building2,
     iconWrapClass:
       "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
@@ -369,55 +369,55 @@ const clientValueItems = [
 
 const faqItems = [
   {
-    question: "Is this a franchise or a partner model?",
-    answer: "It’s a hybrid model with ready infrastructure for launching a local project.",
+    question: "¿Es una franquicia o un modelo de alianza?",
+    answer: "Es un modelo híbrido con infraestructura lista para lanzar un proyecto local.",
   },
   {
-    question: "Do I need to hire developers?",
-    answer: "No. The website, technical support, and platform development are handled by us.",
+    question: "¿Necesito contratar desarrolladores?",
+    answer: "No. La website, el soporte técnico y el desarrollo de la plataforma están de nuestro lado.",
   },
   {
-    question: "Who updates the vehicle catalog?",
-    answer: "We update and manage the catalog.",
+    question: "¿Quién actualiza el catálogo de vehículos?",
+    answer: "Nosotros actualizamos y gestionamos el catálogo.",
   },
   {
-    question: "Who handles delivery?",
-    answer: "We organize international logistics and vehicle delivery.",
+    question: "¿Quién se encarga de la entrega?",
+    answer: "Organizamos la logística internacional y la entrega de vehículos.",
   },
   {
-    question: "Can you connect our CRM?",
-    answer: "Yes. We integrate the platform with your CRM.",
+    question: "¿Pueden conectar nuestro CRM?",
+    answer: "Sí. Integramos la plataforma con tu CRM.",
   },
   {
-    question: "Can we run ads through you?",
-    answer: "Yes. We set up and manage Google Ads campaigns.",
+    question: "¿Podemos hacer publicidad con ustedes?",
+    answer: "Sí. Configuramos y gestionamos campañas de Google Ads.",
   },
   {
-    question: "How many partners can there be in one country?",
-    answer: "Only one. One country — one FluxCars partner.",
+    question: "¿Cuántos socios puede haber en un país?",
+    answer: "Solo uno. Un país — un socio FluxCars.",
   },
 ];
 
 const contactFields = [
-  { label: "Name", name: "name", type: "text", placeholder: "Your name" },
-  { label: "Company", name: "company", type: "text", placeholder: "Company name" },
-  { label: "Country", name: "country", type: "text", placeholder: "Country" },
+  { label: "Nombre", name: "name", type: "text", placeholder: "Tu nombre" },
+  { label: "Empresa", name: "company", type: "text", placeholder: "Nombre de la empresa" },
+  { label: "País", name: "country", type: "text", placeholder: "País" },
   { label: "Email", name: "email", type: "email", placeholder: "name@company.com" },
-  { label: "Phone / Telegram", name: "phone", type: "text", placeholder: "+1 000 000 0000" },
+  { label: "Teléfono / Telegram", name: "phone", type: "text", placeholder: "+34 600 000 000" },
 ];
 
 const contactStrings = {
-  commentLabel: "Comment",
-  commentPlaceholder: "Briefly describe your market, experience, and goals",
-  consentText: "I consent to the processing of personal data and to be contacted about my request.",
-  consentError: "Please confirm consent to personal data processing.",
+  commentLabel: "Comentario",
+  commentPlaceholder: "Describe brevemente tu mercado, experiencia y objetivo",
+  consentText: "Acepto el tratamiento de datos personales y el contacto sobre mi solicitud.",
+  consentError: "Por favor confirma el consentimiento para el tratamiento de datos personales.",
   submitHelperText:
-    "By clicking the button, you confirm interest in a partnership launch and feedback from FluxCars.",
-  submitButton: "Submit request",
-  submittingButton: "Sending...",
-  submitError: "Failed to send the message.",
-  networkError: "Network error. Check your connection and try again.",
-  successMessage: "Request sent successfully. We’ll contact you shortly.",
+    "Al hacer clic en el botón, confirmas interés en el lanzamiento en alianza y en recibir contacto de FluxCars.",
+  submitButton: "Enviar solicitud",
+  submittingButton: "Enviando...",
+  submitError: "No se pudo enviar el mensaje.",
+  networkError: "Error de red. Verifica tu conexión e inténtalo de nuevo.",
+  successMessage: "Solicitud enviada con éxito. Nos pondremos en contacto contigo pronto.",
 };
 
 function SectionHeading({
@@ -501,9 +501,9 @@ export default function HomePage() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <LanguageSwitch current="en" />
+            <LanguageSwitch current="es" />
             <Button asChild size="lg" className="bg-blue-700 hover:bg-blue-800">
-              <Link href="#contacts">Become a partner</Link>
+              <Link href="#contacts">Convertirse en socio</Link>
             </Button>
           </div>
         </div>
@@ -512,21 +512,21 @@ export default function HomePage() {
       <section id="top" className="container-shell section-space pt-14 sm:pt-20 lg:pt-24">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           <AnimatedSection className="space-y-8">
-            <span className="eyebrow">Premium B2B platform for auto businesses</span>
+            <span className="eyebrow">Plataforma B2B premium para negocios automotrices</span>
             <div className="space-y-6">
               <h1 className="max-w-4xl text-5xl leading-[0.98] font-semibold text-slate-950 sm:text-6xl lg:text-7xl">
-                Launch your auto business with FluxCars
+                Lanza tu negocio automotriz con FluxCars
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
-                A ready-to-launch website in your language, tens of thousands of cars from China, catalog updates,
-                international delivery, payment infrastructure, Google Ads, corporate email, and CRM integration.
+                Una website lista para lanzar en tu idioma, decenas de miles de autos desde China, actualizaciones del catálogo,
+                entrega internacional, infraestructura de pagos, Google Ads, correo corporativo e integración con CRM.
               </p>
             </div>
 
             <div className="premium-panel max-w-3xl p-6 sm:p-8">
               <p className="text-lg leading-8 font-medium text-slate-900 sm:text-xl">
-                You focus on promotion and working with customers. We handle the platform, website updates, logistics,
-                and transaction infrastructure.
+                Tú te enfocas en la promoción y en atender clientes. Nosotros gestionamos la plataforma, las actualizaciones
+                de la website, la logística y la infraestructura de las transacciones.
               </p>
             </div>
 
@@ -535,12 +535,12 @@ export default function HomePage() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg" className="bg-blue-700 px-8 hover:bg-blue-800">
                 <Link href="#contacts">
-                  Become a partner
+                  Convertirse en socio
                   <ArrowRight className="size-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="secondary" className="border-slate-200 bg-white/80 px-8">
-                <Link href="#contacts">Get the terms</Link>
+                <Link href="#contacts">Obtener condiciones</Link>
               </Button>
             </div>
           </AnimatedSection>
@@ -550,7 +550,7 @@ export default function HomePage() {
             <div className="relative space-y-6">
               <div className="flex items-center justify-between rounded-[28px] border border-blue-100 bg-white/80 px-5 py-4">
                 <div>
-                  <p className="text-xs font-semibold tracking-[0.22em] text-blue-700 uppercase">Launch stack</p>
+                  <p className="text-xs font-semibold tracking-[0.22em] text-blue-700 uppercase">Base de lanzamiento</p>
                   <p className="mt-2 text-xl font-semibold text-slate-950">Business model, website, logistics</p>
                 </div>
                 <div className="rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white">B2B</div>
@@ -584,22 +584,21 @@ export default function HomePage() {
       <AnimatedSection className="container-shell section-space">
         <div className="premium-panel grid gap-10 p-8 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
           <SectionHeading
-            eyebrow="Why it pays off"
-            title="Don’t spend hundreds of thousands to enter the auto business"
+            eyebrow="Por qué conviene"
+            title="No gastes cientos de miles para entrar al negocio automotriz"
           />
           <p className="text-base leading-8 text-slate-600 sm:text-lg">
-            Building a China-car sales project from scratch requires major investment in development, catalog,
-            technical support, advertising, international payments, CRM, email, logistics, and operations.
+            Crear desde cero un proyecto de venta de autos de China requiere una gran inversión en desarrollo, catálogo,
+            soporte técnico, publicidad, pagos internacionales, CRM, email, logística y operaciones.
             <br />
             <br />
-            FluxCars already brings all of this together in one system. You get a ready foundation to launch and grow
-            in your market.
+            FluxCars ya integra todo esto en un solo sistema. Obtienes una base lista para lanzar y crecer en tu mercado.
           </p>
         </div>
       </AnimatedSection>
 
       <AnimatedSection id="benefits" className="container-shell section-space">
-        <SectionHeading eyebrow="Benefits" title="What a FluxCars partner gets" />
+        <SectionHeading eyebrow="Beneficios" title="Lo que obtiene un socio de FluxCars" />
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {benefitCards.map(({ title, text, icon: Icon }, index) => (
             <Card key={title} className={index % 3 === 0 ? "bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(232,241,255,0.9))]" : ""}>
@@ -619,12 +618,12 @@ export default function HomePage() {
 
       <AnimatedSection id="how-it-works" className="container-shell section-space">
         <div className="premium-panel p-8 sm:p-10 lg:p-14">
-          <SectionHeading eyebrow="Operating model" title="A simple operating model" />
+          <SectionHeading eyebrow="Modelo operativo" title="Un modelo operativo simple" />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <Card className="overflow-hidden border-blue-100/90 bg-[linear-gradient(165deg,rgba(242,247,255,0.98)_0%,rgba(255,255,255,0.93)_100%)] shadow-[0_24px_60px_rgba(16,71,200,0.1)]">
               <CardHeader>
-                <CardTitle className="text-2xl">What FluxCars does</CardTitle>
-                <CardDescription className="text-slate-600">Infrastructure, platform, and operations</CardDescription>
+                <CardTitle className="text-2xl">Qué hace FluxCars</CardTitle>
+                <CardDescription className="text-slate-600">Infraestructura, plataforma y operaciones</CardDescription>
               </CardHeader>
               <CardContent>
                 <ResponsibilityList items={fluxCarsResponsibilities} />
@@ -632,8 +631,8 @@ export default function HomePage() {
             </Card>
             <Card className="overflow-hidden border-slate-200/90 bg-[linear-gradient(165deg,rgba(255,255,255,0.98)_0%,rgba(246,249,255,0.94)_100%)] shadow-[0_24px_60px_rgba(15,23,42,0.1)]">
               <CardHeader>
-                <CardTitle className="text-2xl">What the partner does</CardTitle>
-                <CardDescription className="text-slate-600">Local market, customers, and sales growth</CardDescription>
+                <CardTitle className="text-2xl">Qué hace el socio</CardTitle>
+                <CardDescription className="text-slate-600">Mercado local, clientes y crecimiento de ventas</CardDescription>
               </CardHeader>
               <CardContent>
                 <ResponsibilityList items={partnerResponsibilities} />
@@ -648,9 +647,9 @@ export default function HomePage() {
 
       <AnimatedSection className="container-shell section-space">
         <SectionHeading
-          eyebrow="Why they choose"
-          title="Fast time to market"
-          copy="While others build for years, you can launch promotion quickly and start selling."
+          eyebrow="Por qué eligen"
+          title="Salida rápida al mercado"
+          copy="Mientras otros construyen durante años, tú puedes lanzar promoción rápido y empezar a vender."
         />
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
           {reasons.map(({ title, text, icon: Icon, iconWrapClass }) => (
@@ -674,12 +673,12 @@ export default function HomePage() {
       <AnimatedSection className="container-shell section-space">
         <div className="premium-panel grid gap-10 overflow-hidden p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
           <div className="space-y-6">
-            <span className="eyebrow">Exclusivity</span>
-            <h2 className="section-title">One partner for your country</h2>
+            <span className="eyebrow">Exclusividad</span>
+            <h2 className="section-title">Un socio por país</h2>
             <p className="section-copy">
-              We don’t sell the same model to multiple players within one market. One country — one FluxCars partner.
+              No vendemos el mismo modelo a varios jugadores dentro de un mismo mercado. Un país — un socio FluxCars.
             </p>
-            <p className="text-lg leading-8 font-medium text-blue-700">Availability is limited by geography.</p>
+            <p className="text-lg leading-8 font-medium text-blue-700">La disponibilidad está limitada por geografía.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {exclusivityItems.map(({ title, icon: Icon, iconWrapClass }) => (
@@ -699,7 +698,7 @@ export default function HomePage() {
 
       <AnimatedSection id="for-whom" className="container-shell section-space">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeading eyebrow="Who it’s for" title="Who the FluxCars partnership model is for" />
+          <SectionHeading eyebrow="Para quién" title="Para quién es el modelo de alianza FluxCars" />
           <div className="overflow-hidden rounded-[34px] border border-[#d9e4ff] bg-[linear-gradient(145deg,#f6fbff_0%,#eef6ff_45%,#f8f4ff_100%)] p-6 shadow-[0_24px_70px_rgba(24,64,140,0.12)] sm:p-8">
             <ul className="grid gap-4 sm:grid-cols-2">
               {audienceItems.map(({ title, icon: Icon, iconWrapClass }) => (
@@ -719,7 +718,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="container-shell section-space">
-        <SectionHeading eyebrow="Launch steps" title="How the partnership launches" />
+        <SectionHeading eyebrow="Pasos de lanzamiento" title="Cómo se lanza la alianza" />
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {steps.map((step) => {
             const StepIcon = step.icon;
@@ -736,7 +735,7 @@ export default function HomePage() {
                     <StepIcon className="size-6" />
                   </div>
                   <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[11px] font-semibold tracking-[0.18em] text-blue-700 uppercase">
-                    Launch step
+                    Paso de lanzamiento
                   </span>
                 </div>
                 <h3 className="max-w-sm text-2xl leading-tight font-semibold text-slate-950">
@@ -753,9 +752,9 @@ export default function HomePage() {
       <AnimatedSection className="container-shell section-space">
         <div className="overflow-hidden rounded-[36px] border border-[#d9e4ff] bg-[linear-gradient(140deg,#f6fbff_0%,#eef6ff_45%,#f7f3ff_100%)] p-8 shadow-[0_28px_90px_rgba(24,64,140,0.12)] sm:p-10 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:p-14">
           <SectionHeading
-            eyebrow="Customer value"
-            title="What your customer gets"
-            copy="For the customer it’s a convenient local service. For you it’s a strong international platform behind you."
+            eyebrow="Valor para el cliente"
+            title="Qué obtiene tu cliente"
+            copy="Para el cliente es un servicio local cómodo. Para ti es una plataforma internacional sólida detrás."
           />
           <div className="space-y-6">
             <div className="grid gap-4 sm:grid-cols-2">
@@ -776,7 +775,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection id="faq" className="container-shell section-space">
-        <SectionHeading eyebrow="FAQ" title="Frequently asked questions" />
+        <SectionHeading eyebrow="FAQ" title="Preguntas frecuentes" />
         <div className="premium-panel mt-12 p-6 sm:p-8">
           <Accordion type="single" collapsible className="divide-y divide-slate-200/70">
             {faqItems.map((item) => (
@@ -798,27 +797,27 @@ export default function HomePage() {
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div className="space-y-6">
               <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-[0.22em] uppercase">
-                Final step
+                Paso final
               </span>
                 <h2 className="max-w-4xl text-4xl leading-[1.02] font-semibold sm:text-5xl lg:text-6xl">
-                  Launch your auto business with FluxCars
+                  Lanza tu negocio automotriz con FluxCars
                 </h2>
               <p className="max-w-3xl text-base leading-8 text-blue-50/88 sm:text-lg">
-                Get a website in the right language, tens of thousands of listings from the Chinese market, an updated
-                catalog, international logistics, delivery anywhere in the world, payment infrastructure, corporate
-                email, Google Ads, and CRM integration.
+                Obtén una website en el idioma correcto, decenas de miles de ofertas del mercado chino, un catálogo
+                actualizado, logística internacional, entrega a cualquier parte del mundo, infraestructura de pagos,
+                correo corporativo, Google Ads e integración con CRM.
               </p>
             </div>
             <div className="space-y-6">
               <p className="text-lg leading-8 font-medium text-white">
-                Don’t spend hundreds of thousands to launch from scratch. Use the ready FluxCars platform and focus on
-                sales.
+                No gastes cientos de miles para lanzar desde cero. Usa la plataforma FluxCars lista y enfócate en las
+                ventas.
               </p>
               <p className="text-lg leading-8 font-medium text-blue-100">
-                One partner per country. Slots are limited.
+                Un socio por país. Los cupos son limitados.
               </p>
               <Button asChild size="lg" className="bg-white px-8 text-slate-950 hover:bg-blue-50">
-                <Link href="#contacts">Get partnership terms</Link>
+                <Link href="#contacts">Obtener condiciones de alianza</Link>
               </Button>
             </div>
           </div>
@@ -828,17 +827,17 @@ export default function HomePage() {
       <AnimatedSection id="contacts" className="container-shell section-space pt-0">
         <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr]">
           <div className="space-y-6">
-            <span className="eyebrow">Contact</span>
-            <h2 className="section-title">Leave a request and let’s discuss your market launch</h2>
+            <span className="eyebrow">Contacto</span>
+            <h2 className="section-title">Deja una solicitud y hablemos del lanzamiento en tu mercado</h2>
             <p className="section-copy">
-              Tell us about your country, company, and project format. We’ll contact you to discuss partnership terms,
-              launch, and market exclusivity.
+              Cuéntanos sobre tu país, empresa y formato del proyecto. Te contactaremos para hablar de las condiciones
+              de la alianza, el lanzamiento y la exclusividad del mercado.
             </p>
             <div className="grid gap-4">
               {[
-                { text: "We’ll explain the partnership model and launch terms", icon: PhoneCall },
-                { text: "We’ll show how the project infrastructure looks", icon: Building2 },
-                { text: "We’ll discuss market exclusivity", icon: ShieldCheck },
+                { text: "Explicamos el modelo de alianza y las condiciones de lanzamiento", icon: PhoneCall },
+                { text: "Mostramos cómo luce la infraestructura del proyecto", icon: Building2 },
+                { text: "Hablamos de exclusividad de mercado", icon: ShieldCheck },
               ].map(({ text, icon: Icon }) => (
                 <div key={text} className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/75 px-4 py-4">
                   <Icon className="mt-1 size-5 text-blue-700" />
@@ -869,7 +868,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">About the company</h3>
+              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">Sobre la empresa</h3>
               <p className="text-base leading-7 text-slate-100">Hefei Accord Import and Export Co., LTD</p>
               <p className="text-sm leading-6 text-slate-300">
                 Legal address: Floor 12, 6-9, 11-14, Building B, No. 188, Shangcheng Avenue, Futian District, Yiwu,
@@ -879,7 +878,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">Contact channels</h3>
+              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">Canales de contacto</h3>
               <div className="grid gap-3">
                 <a
                   href="https://t.me/chinamotor_bot"

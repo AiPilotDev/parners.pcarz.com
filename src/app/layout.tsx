@@ -16,31 +16,31 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fluxcars.com"),
-  title: "FluxCars Partners | Запуск локального авто-бизнеса",
+  title: "FluxCars Partners | Launch a local auto business",
   description:
-    "Партнерская модель FluxCars для запуска локального бизнеса по продаже автомобилей из Китая на готовой международной платформе.",
+    "FluxCars partnership model to launch a local business selling cars from China on top of a ready international platform.",
   keywords: [
     "FluxCars",
-    "партнерская модель",
-    "авто из Китая",
-    "запуск авто-бизнеса",
-    "B2B платформа",
-    "автомобили из Китая",
+    "partnership model",
+    "cars from China",
+    "launch auto business",
+    "B2B platform",
+    "vehicle catalog",
   ],
   openGraph: {
     title: "FluxCars Partners",
     description:
-      "Запустите локальный авто-бизнес на базе FluxCars: сайт, каталог, логистика, платежная инфраструктура и CRM.",
+      "Launch a local auto business with FluxCars: website, catalog, logistics, payment infrastructure, and CRM.",
     url: "https://fluxcars.com",
     siteName: "FluxCars",
-    locale: "ru_RU",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "FluxCars Partners",
     description:
-      "Готовая платформа для запуска локального бизнеса по продаже автомобилей из Китая.",
+      "A ready platform to launch a local business selling cars from China.",
   },
 };
 
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ru" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body className={`${manrope.variable} ${montserrat.variable} bg-background font-sans text-foreground antialiased`}>
         {children}
       </body>
