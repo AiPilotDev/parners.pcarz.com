@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 
 import { AnimatedSection } from "@/components/landing/animated-section";
+import { ContactForm } from "@/components/landing/contact-form";
 import {
   Accordion,
   AccordionContent,
@@ -202,24 +203,32 @@ const partnerResponsibilities = [
 
 const reasons = [
   {
-    title: "Быстрый выход на рынок",
-    text: "Пока другие строят платформу месяцами, вы можете быстрее запустить продвижение и начать получать заявки.",
-  },
-  {
-    title: "Сильная витрина с первого дня",
-    text: "Большой каталог на сайте сразу усиливает доверие клиента и улучшает восприятие бренда.",
+    title: "Веб-платформа для старта",
+    text: "С первого дня вы выходите на рынок с технологической платформой и большим выбором автомобилей.",
+    icon: Building2,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
   },
   {
     title: "Готовая основа для работы",
-    text: "Вы получаете не просто сайт, а рабочую систему: каталог, логистику, платежную инфраструктуру, рекламу и CRM-связку.",
+    text: "Вы получаете рабочую систему: вебсайт, логистику, платежную инфраструктуру, рекламу и CRM-связку.",
+    icon: Database,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
   },
   {
     title: "Фокус на продажах, а не на технических задачах",
     text: "Чтобы войти в рынок, не нужно самостоятельно собирать разработку, интеграции и операционные процессы.",
+    icon: Settings2,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
   },
   {
     title: "Рост собственного бренда",
     text: "Со временем вы накапливаете локальный бренд, трафик, CRM, базу лидов и узнаваемость на своём рынке.",
+    icon: TrendingUp,
+    iconWrapClass:
+      "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
   },
 ];
 
@@ -250,12 +259,37 @@ const exclusivityItems = [
   },
 ];
 
-const audienceBullets = [
-  "предпринимателям, которые хотят быстро войти в нишу авто из Китая",
-  "локальным продавцам и компаниям с опытом в продажах",
-  "маркетинговым командам, умеющим генерировать лиды",
-  "тем, кто хочет запустить авто-проект без сложной собственной разработки",
-  "тем, кто понимает свой рынок и хочет строить сильный локальный бренд",
+const audienceItems = [
+  {
+    title: "Предпринимателям, которые хотят быстро войти в нишу авто из Китая",
+    icon: BriefcaseBusiness,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
+  },
+  {
+    title: "Локальным продавцам и компаниям с опытом в продажах",
+    icon: Building2,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
+  },
+  {
+    title: "Маркетинговым командам, умеющим генерировать лиды",
+    icon: Megaphone,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
+  },
+  {
+    title: "Тем, кто хочет запустить авто-проект без сложной собственной разработки",
+    icon: Settings2,
+    iconWrapClass:
+      "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
+  },
+  {
+    title: "Тем, кто понимает свой рынок и хочет строить сильный локальный бренд",
+    icon: Globe,
+    iconWrapClass:
+      "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
+  },
 ];
 
 const steps = [
@@ -291,19 +325,49 @@ const steps = [
   },
 ];
 
-const clientValueBullets = [
-  "сайт на своём языке",
-  "большой выбор автомобилей из Китая",
-  "локальную коммуникацию и сопровождение",
-  "понятный процесс покупки",
-  "поддержку по оплате и доставке",
-  "доступ к международной поставке через локальный сервис",
+const clientValueItems = [
+  {
+    title: "Проверку тех. состояния авто",
+    icon: ShieldCheck,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
+  },
+  {
+    title: "Прямой доступ к китайскому авторынку",
+    icon: Globe,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
+  },
+  {
+    title: "Локальную коммуникацию и сопровождение",
+    icon: PhoneCall,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
+  },
+  {
+    title: "Понятный процесс покупки",
+    icon: BadgeCheck,
+    iconWrapClass:
+      "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
+  },
+  {
+    title: "Поддержку по оплате и доставке",
+    icon: Plane,
+    iconWrapClass:
+      "border border-[#cde8f8] bg-[linear-gradient(145deg,#f0faff_0%,#d9f0ff_100%)] text-[#145587] shadow-[0_10px_22px_rgba(20,85,135,0.2)]",
+  },
+  {
+    title: "Доступ к международной поставке через локальный сервис",
+    icon: Building2,
+    iconWrapClass:
+      "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
+  },
 ];
 
 const faqItems = [
   {
     question: "Это франшиза или партнёрская модель?",
-    answer: "Это партнёрская модель с готовой инфраструктурой для запуска локального проекта.",
+    answer: "Это смешанная модель, с готовой инфраструктурой для запуска локального проекта.",
   },
   {
     question: "Нужно ли искать разработчиков?",
@@ -563,16 +627,24 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="container-shell section-space">
-        <SectionHeading eyebrow="Почему выбирают" title="Почему партнёры выбирают FluxCars" />
+        <SectionHeading
+          eyebrow="Почему выбирают"
+          title="Быстрый выход на рынок"
+          copy="Пока другие строят бизнес годами, вы можете моментально запустить продвижение и делать продажи."
+        />
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          {reasons.map((item, index) => (
-            <div key={item.title} className="premium-panel flex gap-5 p-6 sm:p-7">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-white">
-                <span className="font-display text-lg font-semibold">{index + 1}</span>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl leading-tight font-semibold text-slate-950">{item.title}</h3>
-                <p className="text-base leading-7 text-slate-600">{item.text}</p>
+          {reasons.map(({ title, text, icon: Icon, iconWrapClass }) => (
+            <div
+              key={title}
+              className="group relative overflow-hidden rounded-[30px] border border-white/90 bg-[linear-gradient(170deg,rgba(255,255,255,0.98)_0%,rgba(243,248,255,0.9)_100%)] p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_26px_70px_rgba(30,64,175,0.14)] sm:p-7"
+            >
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top_right,rgba(148,163,184,0.14),transparent_62%)]" />
+              <div className="relative space-y-3">
+                <div className={`mb-1 flex size-12 items-center justify-center rounded-2xl ${iconWrapClass}`}>
+                  <Icon className="size-5" />
+                </div>
+                <h3 className="text-2xl leading-tight font-semibold text-slate-950">{title}</h3>
+                <p className="text-base leading-7 text-slate-600">{text}</p>
               </div>
             </div>
           ))}
@@ -609,8 +681,20 @@ export default function HomePage() {
       <AnimatedSection id="for-whom" className="container-shell section-space">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading eyebrow="Для кого" title="Кому подходит партнёрская модель FluxCars" />
-          <div className="premium-panel p-6 sm:p-8">
-            <BulletList items={audienceBullets} />
+          <div className="overflow-hidden rounded-[34px] border border-[#d9e4ff] bg-[linear-gradient(145deg,#f6fbff_0%,#eef6ff_45%,#f8f4ff_100%)] p-6 shadow-[0_24px_70px_rgba(24,64,140,0.12)] sm:p-8">
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {audienceItems.map(({ title, icon: Icon, iconWrapClass }) => (
+                <li
+                  key={title}
+                  className="rounded-[24px] border border-white/90 bg-white/80 px-5 py-5 shadow-[0_16px_42px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
+                    <Icon className="size-5" />
+                  </div>
+                  <p className="text-base leading-7 font-medium text-slate-900">{title}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </AnimatedSection>
@@ -648,12 +732,25 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="container-shell section-space">
-        <div className="premium-panel grid gap-10 p-8 sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:p-14">
-          <SectionHeading eyebrow="Ценность для клиента" title="Что получает ваш клиент" />
+        <div className="overflow-hidden rounded-[36px] border border-[#d9e4ff] bg-[linear-gradient(140deg,#f6fbff_0%,#eef6ff_45%,#f7f3ff_100%)] p-8 shadow-[0_28px_90px_rgba(24,64,140,0.12)] sm:p-10 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:p-14">
+          <SectionHeading
+            eyebrow="Ценность для клиента"
+            title="Что получает ваш клиент"
+            copy="Для клиента это удобный местный проект. Для вас — сильная международная платформа за спиной."
+          />
           <div className="space-y-6">
-            <BulletList items={clientValueBullets} />
-            <div className="rounded-[28px] border border-blue-100 bg-blue-50/80 px-6 py-7 text-lg leading-8 font-medium text-slate-900">
-              Для клиента это удобный местный проект. Для вас — сильная международная платформа за спиной.
+            <div className="grid gap-4 sm:grid-cols-2">
+              {clientValueItems.map(({ title, icon: Icon, iconWrapClass }) => (
+                <div
+                  key={title}
+                  className="rounded-[24px] border border-white/90 bg-white/80 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
+                    <Icon className="size-5" />
+                  </div>
+                  <p className="text-base leading-7 font-medium text-slate-900">{title}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -720,50 +817,19 @@ export default function HomePage() {
             </p>
             <div className="grid gap-4">
               {[
-                "Ответим по модели партнёрства и условиям запуска",
-                "Покажем, как выглядит инфраструктура проекта",
-                "Обсудим эксклюзивность на ваш рынок",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/75 px-4 py-4">
-                  <PhoneCall className="mt-1 size-5 text-blue-700" />
-                  <p className="text-base leading-7 text-slate-700">{item}</p>
+                { text: "Ответим по модели партнёрства и условиям запуска", icon: PhoneCall },
+                { text: "Покажем, как выглядит инфраструктура проекта", icon: Building2 },
+                { text: "Обсудим эксклюзивность на ваш рынок", icon: ShieldCheck },
+              ].map(({ text, icon: Icon }) => (
+                <div key={text} className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/75 px-4 py-4">
+                  <Icon className="mt-1 size-5 text-blue-700" />
+                  <p className="text-base leading-7 text-slate-700">{text}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <form className="premium-panel p-6 sm:p-8" action="#">
-            <div className="grid gap-5 md:grid-cols-2">
-              {contactFields.map((field) => (
-                <label key={field.name} className="grid gap-2 text-sm font-medium text-slate-700">
-                  <span>{field.label}</span>
-                  <input
-                    type={field.type}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    className="h-12 rounded-2xl border border-slate-200 bg-white px-4 text-base text-slate-950 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
-                  />
-                </label>
-              ))}
-              <label className="grid gap-2 text-sm font-medium text-slate-700 md:col-span-2">
-                <span>Comment</span>
-                <textarea
-                  name="comment"
-                  placeholder="Коротко опишите ваш рынок, опыт и задачу"
-                  rows={5}
-                  className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
-                />
-              </label>
-            </div>
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm leading-6 text-slate-500">
-                Нажимая кнопку, вы подтверждаете интерес к партнёрскому запуску и обратной связи от FluxCars.
-              </p>
-              <Button type="submit" size="lg" className="bg-blue-700 px-8 hover:bg-blue-800">
-                Оставить заявку
-              </Button>
-            </div>
-          </form>
+          <ContactForm fields={contactFields} />
         </div>
       </AnimatedSection>
     </main>
