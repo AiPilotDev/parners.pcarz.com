@@ -18,6 +18,7 @@ import {
   ShieldCheck,
   Sparkles,
   TrendingUp,
+  type LucideIcon,
 } from "lucide-react";
 
 import { AnimatedSection } from "@/components/landing/animated-section";
@@ -122,21 +123,81 @@ const benefitCards = [
 ];
 
 const fluxCarsResponsibilities = [
-  "даёт сайт и платформу",
-  "размещает и обновляет каталог",
-  "поддерживает и развивает систему",
-  "помогает с платежной инфраструктурой",
-  "организует международную логистику и доставку",
-  "подключает почту, рекламу и CRM",
+  {
+    title: "Даёт сайт и платформу",
+    icon: Building2,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
+  },
+  {
+    title: "Размещает и обновляет каталог",
+    icon: Database,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
+  },
+  {
+    title: "Поддерживает и развивает систему",
+    icon: BadgeCheck,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
+  },
+  {
+    title: "Помогает с платёжной инфраструктурой",
+    icon: ShieldCheck,
+    iconWrapClass:
+      "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
+  },
+  {
+    title: "Организует международную логистику и доставку",
+    icon: Plane,
+    iconWrapClass:
+      "border border-[#cde8f8] bg-[linear-gradient(145deg,#f0faff_0%,#d9f0ff_100%)] text-[#145587] shadow-[0_10px_22px_rgba(20,85,135,0.2)]",
+  },
+  {
+    title: "Подключает почту, рекламу и CRM",
+    icon: Mail,
+    iconWrapClass:
+      "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
+  },
 ];
 
 const partnerResponsibilities = [
-  "продвигает проект на своём рынке",
-  "работает с входящими заявками",
-  "консультирует клиентов",
-  "сопровождает покупателя",
-  "развивает локальный бренд",
-  "строит продажи и масштабирует бизнес",
+  {
+    title: "Продвигает проект на своём рынке",
+    icon: Megaphone,
+    iconWrapClass:
+      "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_22px_rgba(170,120,30,0.2)]",
+  },
+  {
+    title: "Работает с входящими заявками",
+    icon: PhoneCall,
+    iconWrapClass:
+      "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_22px_rgba(35,72,166,0.2)]",
+  },
+  {
+    title: "Консультирует клиентов",
+    icon: Sparkles,
+    iconWrapClass:
+      "border border-[#d8efe0] bg-[linear-gradient(145deg,#f4fcf8_0%,#d6f3e3_100%)] text-[#1a7a4d] shadow-[0_10px_22px_rgba(26,122,77,0.2)]",
+  },
+  {
+    title: "Сопровождает покупателя",
+    icon: ShieldCheck,
+    iconWrapClass:
+      "border border-[#d7deec] bg-[linear-gradient(145deg,#f8fafd_0%,#e5ebf6_100%)] text-[#334155] shadow-[0_10px_22px_rgba(51,65,85,0.2)]",
+  },
+  {
+    title: "Развивает локальный бренд",
+    icon: Globe,
+    iconWrapClass:
+      "border border-[#cde8f8] bg-[linear-gradient(145deg,#f0faff_0%,#d9f0ff_100%)] text-[#145587] shadow-[0_10px_22px_rgba(20,85,135,0.2)]",
+  },
+  {
+    title: "Строит продажи и масштабирует бизнес",
+    icon: TrendingUp,
+    iconWrapClass:
+      "border border-[#e3dbff] bg-[linear-gradient(145deg,#f8f5ff_0%,#ebe4ff_100%)] text-[#5a36a3] shadow-[0_10px_22px_rgba(90,54,163,0.2)]",
+  },
 ];
 
 const reasons = [
@@ -291,6 +352,32 @@ function BulletList({ items }: { items: string[] }) {
   );
 }
 
+function ResponsibilityList({
+  items,
+}: {
+  items: Array<{
+    title: string;
+    icon: LucideIcon;
+    iconWrapClass: string;
+  }>;
+}) {
+  return (
+    <ul className="grid gap-3">
+      {items.map(({ title, icon: Icon, iconWrapClass }) => (
+        <li
+          key={title}
+          className="flex items-start gap-3 rounded-2xl border border-white/85 bg-white/75 px-4 py-4 shadow-[0_14px_34px_rgba(15,23,42,0.08)]"
+        >
+          <span className={`mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-xl ${iconWrapClass}`}>
+            <Icon className="size-4.5" />
+          </span>
+          <span className="leading-7 text-slate-900">{title}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="relative overflow-hidden">
@@ -430,20 +517,22 @@ export default function HomePage() {
         <div className="premium-panel p-8 sm:p-10 lg:p-14">
           <SectionHeading eyebrow="Модель работы" title="Простая модель работы" />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <Card className="border-blue-100/90 bg-[linear-gradient(180deg,rgba(241,247,255,0.95),rgba(255,255,255,0.92))]">
+            <Card className="overflow-hidden border-blue-100/90 bg-[linear-gradient(165deg,rgba(242,247,255,0.98)_0%,rgba(255,255,255,0.93)_100%)] shadow-[0_24px_60px_rgba(16,71,200,0.1)]">
               <CardHeader>
                 <CardTitle className="text-2xl">Что делает FluxCars</CardTitle>
+                <CardDescription className="text-slate-600">Инфраструктура, платформа и операционная часть</CardDescription>
               </CardHeader>
               <CardContent>
-                <BulletList items={fluxCarsResponsibilities} />
+                <ResponsibilityList items={fluxCarsResponsibilities} />
               </CardContent>
             </Card>
-            <Card>
+            <Card className="overflow-hidden border-slate-200/90 bg-[linear-gradient(165deg,rgba(255,255,255,0.98)_0%,rgba(246,249,255,0.94)_100%)] shadow-[0_24px_60px_rgba(15,23,42,0.1)]">
               <CardHeader>
                 <CardTitle className="text-2xl">Что делает партнёр</CardTitle>
+                <CardDescription className="text-slate-600">Локальный рынок, клиенты и развитие продаж</CardDescription>
               </CardHeader>
               <CardContent>
-                <BulletList items={partnerResponsibilities} />
+                <ResponsibilityList items={partnerResponsibilities} />
               </CardContent>
             </Card>
           </div>
