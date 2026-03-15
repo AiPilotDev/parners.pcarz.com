@@ -61,13 +61,13 @@ const heroBullets = [
 
 const launchStackItems = [
   {
-    title: "Website adaptada a tu mercado",
+    title: "Plataforma localizada para tu país",
     icon: Globe,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_24px_rgba(170,120,30,0.2)]",
   },
   {
-    title: "Catálogo de vehículos desde China",
+    title: "Acceso a más de 100.000 vehículos directamente desde China",
     icon: CarFront,
     iconWrapClass:
       "border border-[#cfd8ff] bg-[linear-gradient(145deg,#f6f9ff_0%,#dbe7ff_100%)] text-[#2348a6] shadow-[0_10px_24px_rgba(35,72,166,0.2)]",
