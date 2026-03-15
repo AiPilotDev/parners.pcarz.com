@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 type LanguageSwitchProps = {
   current: "ru" | "en" | "es";
+  variant?: "light" | "dark";
 };
 
 const flags = {
@@ -42,9 +43,17 @@ const options = [
   { code: "ru", label: "RU", href: "/ru", title: "Русский" },
 ] as const;
 
-export function LanguageSwitch({ current }: LanguageSwitchProps) {
+export function LanguageSwitch({ current, variant = "light" }: LanguageSwitchProps) {
+  const isDark = variant === "dark";
   return (
-    <div className="flex items-center gap-1 rounded-full border border-slate-200/90 bg-white/80 p-1 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+    <div
+      className={cn(
+        "flex items-center gap-1 rounded-full p-1",
+        isDark
+          ? "border border-slate-600 bg-slate-800/80"
+          : "border border-slate-200/90 bg-white/80 shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
+      )}
+    >
       {options.map((option) => (
         <Link
           key={option.code}
@@ -54,8 +63,10 @@ export function LanguageSwitch({ current }: LanguageSwitchProps) {
           className={cn(
             "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-[0.2em] transition",
             current === option.code
-              ? "bg-blue-700 text-white shadow-[0_8px_18px_rgba(37,99,235,0.28)]"
-              : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
+              ? "bg-blue-600 text-white shadow-[0_8px_18px_rgba(37,99,235,0.28)]"
+              : isDark
+                ? "text-slate-400 hover:bg-slate-700 hover:text-white"
+                : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
           )}
         >
           <span className="text-base leading-none">{flags[option.code]}</span>

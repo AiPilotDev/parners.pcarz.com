@@ -485,25 +485,25 @@ export default function HomePage() {
     <main className="relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 -z-10 h-[560px] bg-[radial-gradient(circle_at_top_right,rgba(16,71,200,0.2),transparent_30%),radial-gradient(circle_at_top_left,rgba(56,189,248,0.1),transparent_32%)]" />
 
-      <header className="sticky top-0 z-50 border-b border-white/60 bg-[#f4f8fd]/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-slate-700/80 bg-slate-900/95 backdrop-blur-xl">
         <div className="container-shell flex h-20 items-center justify-between gap-8">
           <Link href="#top" className="flex items-center">
-            <Image src="/fluxcars_logo.webp" alt="FluxCars" width={140} height={40} className="h-10 w-auto object-contain" priority />
+            <Image src="/fluxcars_logo.webp" alt="FluxCars" width={140} height={40} className="h-10 w-auto object-contain brightness-0 invert" priority />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-slate-600 hover:text-slate-950"
+                className="text-sm font-medium text-slate-300 hover:text-white"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <LanguageSwitch current="es" />
-            <Button asChild size="lg" className="bg-blue-700 hover:bg-blue-800">
+            <LanguageSwitch current="es" variant="dark" />
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-500 text-white">
               <Link href="#contacts">Convertirse en socio</Link>
             </Button>
           </div>
