@@ -10,6 +10,7 @@ import {
   Check,
   Database,
   Globe,
+  HelpCircle,
   Mail,
   Megaphone,
   MessageCircle,
@@ -21,6 +22,7 @@ import {
   ShieldCheck,
   Sparkles,
   TrendingUp,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,11 +45,11 @@ export const metadata: Metadata = {
 };
 
 const navItems = [
-  { label: "Преимущества", href: "#benefits" },
-  { label: "Как это работает", href: "#how-it-works" },
-  { label: "Для кого", href: "#for-whom" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Контакты", href: "#contacts" },
+  { label: "Преимущества", href: "#benefits", icon: Sparkles },
+  { label: "Как это работает", href: "#how-it-works", icon: Settings2 },
+  { label: "Для кого", href: "#for-whom", icon: Users },
+  { label: "FAQ", href: "#faq", icon: HelpCircle },
+  { label: "Контакты", href: "#contacts", icon: Mail },
 ];
 
 const heroBullets = [
@@ -491,15 +493,19 @@ export default function HomePage() {
             <Image src="/fluxcars_logo.webp" alt="FluxCars" width={140} height={40} className="h-10 w-auto object-contain brightness-0 invert" priority />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-slate-300 hover:text-white"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white"
+                >
+                  <Icon className="size-4 shrink-0" />
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
           <div className="flex items-center gap-3">
             <LanguageSwitch current="ru" variant="dark" />
