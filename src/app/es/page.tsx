@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -486,8 +487,8 @@ export default function HomePage() {
 
       <header className="sticky top-0 z-50 border-b border-white/60 bg-[#f4f8fd]/80 backdrop-blur-xl">
         <div className="container-shell flex h-20 items-center justify-between gap-8">
-          <Link href="#top" className="font-display text-2xl font-semibold tracking-[-0.06em] text-slate-950">
-            FluxCars
+          <Link href="#top" className="flex items-center">
+            <Image src="/fluxcars_logo.webp" alt="FluxCars" width={140} height={40} className="h-10 w-auto object-contain" priority />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">
             {navItems.map((item) => (
