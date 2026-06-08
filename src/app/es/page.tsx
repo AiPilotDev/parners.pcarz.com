@@ -518,7 +518,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section id="top" className="container-shell pt-8 pb-16 sm:pt-12 lg:pt-16">
+      <section id="top" className="container-shell pt-6 pb-8 sm:pt-10 lg:pt-12">
         <div className="hero-cover">
           <Image
             src="/hero-premium-car.jpg"
@@ -572,7 +572,7 @@ export default function HomePage() {
       </section>
 
       <AnimatedSection className="container-shell section-space">
-        <div className="premium-panel grid gap-10 p-8 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
+        <div className="premium-panel grid gap-8 p-8 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
           <SectionHeading
             eyebrow="Por qué conviene"
             title="No gastes cientos de miles para entrar al negocio automotriz"
@@ -589,7 +589,7 @@ export default function HomePage() {
 
       <AnimatedSection id="benefits" className="container-shell section-space">
         <SectionHeading eyebrow="Beneficios" title="Lo que obtiene un socio de FluxCars" />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {benefitCards.map(({ title, text, icon: Icon }, index) => (
             <Card key={title} className={index % 3 === 0 ? "bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(232,241,255,0.9))]" : ""}>
               <CardHeader className="space-y-5">
@@ -609,8 +609,8 @@ export default function HomePage() {
       <AnimatedSection id="how-it-works" className="container-shell section-space">
         <div className="premium-panel p-8 sm:p-10 lg:p-14">
           <SectionHeading eyebrow="Modelo operativo" title="Un modelo operativo simple" />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <Card className="overflow-hidden border-[#d8b36a2e]/90 bg-[linear-gradient(165deg,rgba(37,31,23,0.96)_0%,rgba(15,13,10,0.9)_100%)] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <Card className="operating-card overflow-hidden">
               <CardHeader>
                 <CardTitle className="text-2xl">Qué hace FluxCars</CardTitle>
                 <CardDescription className="text-slate-600">Infraestructura, plataforma y operaciones</CardDescription>
@@ -619,7 +619,7 @@ export default function HomePage() {
                 <ResponsibilityList items={fluxCarsResponsibilities} />
               </CardContent>
             </Card>
-            <Card className="overflow-hidden border-slate-200/90 bg-[linear-gradient(165deg,rgba(255,255,255,0.98)_0%,rgba(246,249,255,0.94)_100%)] shadow-[0_24px_60px_rgba(15,23,42,0.1)]">
+            <Card className="operating-card operating-card--partner overflow-hidden">
               <CardHeader>
                 <CardTitle className="text-2xl">Qué hace el socio</CardTitle>
                 <CardDescription className="text-slate-600">Mercado local, clientes y crecimiento de ventas</CardDescription>
@@ -629,7 +629,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
           </div>
-          <div className="mt-8 rounded-[28px] bg-slate-950 px-6 py-7 text-lg leading-8 font-medium text-white sm:px-8 sm:text-xl">
+          <div className="operating-summary mt-8 rounded-[28px] px-6 py-7 text-lg leading-8 font-medium sm:px-8 sm:text-xl">
             You focus on the market and customers. We handle infrastructure and operations.
           </div>
         </div>
@@ -641,7 +641,7 @@ export default function HomePage() {
           title="Salida rápida al mercado"
           copy="Mientras otros construyen durante años, tú puedes lanzar promoción rápido y empezar a vender."
         />
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {reasons.map(({ title, text, icon: Icon, iconWrapClass }) => (
             <div
               key={title}
@@ -661,7 +661,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="container-shell section-space">
-        <div className="premium-panel grid gap-10 overflow-hidden p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
+        <div className="premium-panel grid gap-8 overflow-hidden p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
           <div className="space-y-6">
             <span className="eyebrow">Exclusividad</span>
             <h2 className="section-title">Un socio por región</h2>
@@ -687,14 +687,14 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection id="for-whom" className="container-shell section-space">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading eyebrow="Para quién" title="Para quién es el modelo de alianza FluxCars" />
-          <div className="overflow-hidden rounded-[34px] border border-[#d9e4ff] bg-[linear-gradient(145deg,#f6fbff_0%,#eef6ff_45%,#f8f4ff_100%)] p-6 shadow-[0_24px_70px_rgba(24,64,140,0.12)] sm:p-8">
+          <div className="audience-panel overflow-hidden rounded-[34px] border p-6 sm:p-8">
             <ul className="grid gap-4 sm:grid-cols-2">
               {audienceItems.map(({ title, icon: Icon, iconWrapClass }) => (
                 <li
                   key={title}
-                  className="rounded-[24px] border border-white/90 bg-white/80 px-5 py-5 shadow-[0_16px_42px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+                  className="audience-card rounded-[24px] border px-5 py-5 transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
                     <Icon className="size-5" />
@@ -709,7 +709,7 @@ export default function HomePage() {
 
       <AnimatedSection className="container-shell section-space">
         <SectionHeading eyebrow="Pasos de lanzamiento" title="Cómo se lanza la alianza" />
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {steps.map((step) => {
             const StepIcon = step.icon;
 
@@ -740,7 +740,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="container-shell section-space">
-        <div className="overflow-hidden rounded-[36px] border border-[#d9e4ff] bg-[linear-gradient(140deg,#f6fbff_0%,#eef6ff_45%,#f7f3ff_100%)] p-8 shadow-[0_28px_90px_rgba(24,64,140,0.12)] sm:p-10 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:p-14">
+        <div className="customer-value-panel overflow-hidden rounded-[36px] border p-8 sm:p-10 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:p-14">
           <SectionHeading
             eyebrow="Valor para el cliente"
             title="Qué obtiene tu cliente"
@@ -751,7 +751,7 @@ export default function HomePage() {
               {clientValueItems.map(({ title, icon: Icon, iconWrapClass }) => (
                 <div
                   key={title}
-                  className="rounded-[24px] border border-white/90 bg-white/80 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+                  className="customer-value-card rounded-[24px] border p-5 transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
                     <Icon className="size-5" />
@@ -766,7 +766,7 @@ export default function HomePage() {
 
       <AnimatedSection id="faq" className="container-shell section-space">
         <SectionHeading eyebrow="FAQ" title="Preguntas frecuentes" />
-        <div className="premium-panel mt-12 p-6 sm:p-8">
+        <div className="premium-panel mt-8 p-6 sm:p-8">
           <Accordion type="single" collapsible className="divide-y divide-slate-200/70">
             {faqItems.map((item) => (
               <AccordionItem key={item.question} value={item.question} className="border-none">
