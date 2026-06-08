@@ -39,7 +39,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "FluxCars | Partnership model to launch an auto business",
+  title: "FluxCars | Partnership model to launch a car sales business",
   description:
     "Launch a local business selling cars from China on top of FluxCars: website, catalog, logistics, payment infrastructure, Google Ads, and CRM.",
 };
@@ -531,9 +531,9 @@ export default function HomePage() {
           />
           <div className="relative z-10 grid min-h-[inherit] content-between gap-6 p-5 sm:gap-10 sm:p-9 lg:p-12">
             <div className="max-w-4xl space-y-5 sm:space-y-7">
-              <span className="eyebrow">Premium B2B platform for auto businesses</span>
+              <span className="eyebrow">Premium B2B platform for car sales businesses</span>
               <h1 className="text-4xl leading-[0.94] font-semibold text-[var(--luxury-cream)] sm:text-7xl lg:text-8xl">
-                Launch your auto business with FluxCars
+                Launch a car sales business with FluxCars
               </h1>
               <p className="max-w-2xl text-base leading-7 text-stone-200/78 sm:text-xl sm:leading-8">
                 A ready-to-launch website, live China vehicle catalog, logistics, payment infrastructure, Google Ads,
@@ -575,7 +575,7 @@ export default function HomePage() {
         <div className="premium-panel grid gap-10 p-8 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-14">
           <SectionHeading
             eyebrow="Why it pays off"
-            title="Don’t spend hundreds of thousands to enter the auto business"
+            title="Don’t spend hundreds of thousands to enter car sales"
           />
           <p className="text-base leading-8 text-slate-600 sm:text-lg">
             Building a China-car sales project from scratch requires major investment in development, catalog,
@@ -791,7 +791,7 @@ export default function HomePage() {
                 Final step
               </span>
                 <h2 className="max-w-4xl text-4xl leading-[1.02] font-semibold sm:text-5xl lg:text-6xl">
-                  Launch your auto business with FluxCars
+                  Launch a car sales business with FluxCars
                 </h2>
               <p className="max-w-3xl text-base leading-8 text-stone-100/82 sm:text-lg">
                 Get a website in the right language, tens of thousands of listings from the Chinese market, an updated

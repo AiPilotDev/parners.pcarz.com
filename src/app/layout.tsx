@@ -16,21 +16,21 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fluxcars.com"),
-  title: "FluxCars Partners | Launch a local auto business",
+  title: "FluxCars Partners | Launch a local car sales business",
   description:
     "FluxCars partnership model to launch a local business selling cars from China on top of a ready international platform.",
   keywords: [
     "FluxCars",
     "partnership model",
     "cars from China",
-    "launch auto business",
+    "launch car sales business",
     "B2B platform",
     "vehicle catalog",
   ],
   openGraph: {
     title: "FluxCars Partners",
     description:
-      "Launch a local auto business with FluxCars: website, catalog, logistics, payment infrastructure, and CRM.",
+      "Launch a local car sales business with FluxCars: website, catalog, logistics, payment infrastructure, and CRM.",
     url: "https://fluxcars.com",
     siteName: "FluxCars",
     locale: "en_US",
