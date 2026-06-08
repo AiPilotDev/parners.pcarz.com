@@ -54,7 +54,7 @@ export function ContactForm({ fields, strings }: ContactFormProps) {
     const payload = {
       name: String(formData.get("name") ?? ""),
       company: String(formData.get("company") ?? ""),
-      country: String(formData.get("country") ?? ""),
+      region: String(formData.get("region") ?? ""),
       email: String(formData.get("email") ?? ""),
       phone: String(formData.get("phone") ?? ""),
       comment: String(formData.get("comment") ?? ""),
@@ -94,7 +94,7 @@ export function ContactForm({ fields, strings }: ContactFormProps) {
     <form className="premium-panel p-6 sm:p-8" onSubmit={onSubmit} data-lpignore="true" suppressHydrationWarning>
       <div className="grid gap-5 md:grid-cols-2" suppressHydrationWarning>
         {fields.map((field) => (
-          <label key={field.name} className="grid gap-2 text-sm font-medium text-slate-700" suppressHydrationWarning>
+          <label key={field.name} className="grid gap-2 text-sm font-medium text-stone-200" suppressHydrationWarning>
             <span>{field.label}</span>
             <input
               type={field.type}
@@ -103,11 +103,11 @@ export function ContactForm({ fields, strings }: ContactFormProps) {
               required={field.name === "name" || field.name === "email" || field.name === "phone"}
               data-lpignore="true"
               data-form-type="other"
-              className="h-12 rounded-2xl border border-slate-200 bg-white px-4 text-base text-slate-950 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
+              className="h-12 rounded-2xl border border-[#d8b36a33] bg-stone-950/65 px-4 text-base text-stone-50 outline-none transition placeholder:text-stone-500 focus:border-[#d8b36a] focus:ring-4 focus:ring-[#d8b36a22]"
             />
           </label>
         ))}
-        <label className="grid gap-2 text-sm font-medium text-slate-700 md:col-span-2" suppressHydrationWarning>
+        <label className="grid gap-2 text-sm font-medium text-stone-200 md:col-span-2" suppressHydrationWarning>
           <span>{strings.commentLabel}</span>
           <textarea
             name="comment"
@@ -115,17 +115,17 @@ export function ContactForm({ fields, strings }: ContactFormProps) {
             rows={5}
             data-lpignore="true"
             data-form-type="other"
-            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
+            className="rounded-2xl border border-[#d8b36a33] bg-stone-950/65 px-4 py-3 text-base text-stone-50 outline-none transition placeholder:text-stone-500 focus:border-[#d8b36a] focus:ring-4 focus:ring-[#d8b36a22]"
           />
         </label>
       </div>
 
-      <label className="mt-5 flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-white/70 px-4 py-4 text-sm leading-6 text-slate-700">
+      <label className="mt-5 flex items-start gap-3 rounded-2xl border border-[#d8b36a33] bg-stone-950/45 px-4 py-4 text-sm leading-6 text-stone-300">
         <input
           type="checkbox"
           checked={consent}
           onChange={(event) => setConsent(event.target.checked)}
-          className="mt-1 size-4 rounded border-slate-300 text-blue-700 focus:ring-blue-400"
+          className="mt-1 size-4 rounded border-stone-500 text-[#d8b36a] focus:ring-[#d8b36a]"
         />
         <span>{strings.consentText}</span>
       </label>
@@ -141,8 +141,8 @@ export function ContactForm({ fields, strings }: ContactFormProps) {
       ) : null}
 
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm leading-6 text-slate-500">{strings.submitHelperText}</p>
-        <Button type="submit" size="lg" className="bg-blue-700 px-8 hover:bg-blue-800" disabled={isSubmitting}>
+        <p className="text-sm leading-6 text-stone-400">{strings.submitHelperText}</p>
+        <Button type="submit" size="lg" className="bg-[var(--luxury-gold)] px-8 text-stone-950 hover:bg-[#f0c978]" disabled={isSubmitting}>
           {isSubmitting ? strings.submittingButton : strings.submitButton}
         </Button>
       </div>

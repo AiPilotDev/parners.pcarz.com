@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 type ContactPayload = {
   name: string;
   company: string;
-  country: string;
+  region: string;
   email: string;
   phone: string;
   comment: string;
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   const payload: ContactPayload = {
     name: (body.name ?? "").trim(),
     company: (body.company ?? "").trim(),
-    country: (body.country ?? "").trim(),
+    region: (body.region ?? "").trim(),
     email: (body.email ?? "").trim(),
     phone: (body.phone ?? "").trim(),
     comment: (body.comment ?? "").trim(),
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     "Новая заявка с формы сайта FluxCars",
     `Имя: ${payload.name}`,
     `Компания: ${payload.company || "-"}`,
-    `Страна: ${payload.country || "-"}`,
+    `Регион: ${payload.region || "-"}`,
     `Email: ${payload.email}`,
     `Телефон / Telegram: ${payload.phone}`,
     `Комментарий: ${payload.comment || "-"}`,

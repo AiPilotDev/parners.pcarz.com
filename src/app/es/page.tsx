@@ -55,13 +55,13 @@ const navItems = [
 const heroBullets = [
   "Decenas de miles de autos en tu website",
   "Entrega a cualquier parte del mundo",
-  "Un socio exclusivo por país",
+  "Un socio exclusivo por región",
   "Sin costos de lanzamiento de seis cifras",
 ];
 
 const launchStackItems = [
   {
-    title: "Plataforma localizada para tu país",
+    title: "Plataforma localizada para tu región",
     icon: Globe,
     iconWrapClass:
       "border border-[#f3e2bf] bg-[linear-gradient(145deg,#fffaf0_0%,#f7e7c6_100%)] text-[#8b5b10] shadow-[0_10px_24px_rgba(170,120,30,0.2)]",
@@ -89,7 +89,7 @@ const launchStackItems = [
 const benefitCards = [
   {
     title: "Website lista para tu mercado",
-    text: "Lanzamos una website en el idioma correcto, adaptada a tu país y audiencia.",
+    text: "Lanzamos una website en el idioma correcto, adaptada a tu región y audiencia.",
     icon: Globe,
   },
   {
@@ -301,7 +301,7 @@ const audienceItems = [
 const steps = [
   {
     title: "Analizamos tu mercado y el formato de lanzamiento",
-    text: "Definimos la mejor forma de lanzar en tu país: idioma de la website, posicionamiento, modelo de cliente y promoción.",
+    text: "Definimos la mejor forma de lanzar en tu región: idioma de la website, posicionamiento, modelo de cliente y promoción.",
     icon: Search,
   },
   {
@@ -396,15 +396,15 @@ const faqItems = [
     answer: "Sí. Configuramos y gestionamos campañas de Google Ads.",
   },
   {
-    question: "¿Cuántos socios puede haber en un país?",
-    answer: "Solo uno. Un país — un socio FluxCars.",
+    question: "¿Cuántos socios puede haber en una región?",
+    answer: "Solo uno. Una región — un socio FluxCars.",
   },
 ];
 
 const contactFields = [
   { label: "Nombre", name: "name", type: "text", placeholder: "Tu nombre" },
   { label: "Empresa", name: "company", type: "text", placeholder: "Nombre de la empresa" },
-  { label: "País", name: "country", type: "text", placeholder: "País" },
+  { label: "Región", name: "region", type: "text", placeholder: "Región" },
   { label: "Email", name: "email", type: "email", placeholder: "name@company.com" },
   { label: "Teléfono / Telegram", name: "phone", type: "text", placeholder: "+34 600 000 000" },
 ];
@@ -446,7 +446,7 @@ function BulletList({ items }: { items: string[] }) {
     <ul className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2 sm:text-base">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/75 px-4 py-4">
-          <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
+          <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#d8b36a] text-stone-950">
             <Check className="size-3.5" />
           </span>
           <span className="leading-7">{item}</span>
@@ -485,12 +485,12 @@ function ResponsibilityList({
 export default function HomePage() {
   return (
     <main className="relative overflow-hidden">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[560px] bg-[radial-gradient(circle_at_top_right,rgba(16,71,200,0.2),transparent_30%),radial-gradient(circle_at_top_left,rgba(56,189,248,0.1),transparent_32%)]" />
+      <div className="absolute inset-x-0 top-0 -z-10 h-[560px] bg-[radial-gradient(circle_at_top_right,rgba(216,179,106,0.16),transparent_30%),radial-gradient(circle_at_top_left,rgba(167,82,42,0.12),transparent_32%)]" />
 
       <header className="sticky top-0 z-50 border-b border-slate-700/80 bg-slate-900/95 backdrop-blur-xl">
-        <div className="container-shell flex h-20 items-center justify-between gap-8">
+        <div className="container-shell flex h-20 items-center justify-between gap-3 sm:gap-8">
           <Link href="#top" className="flex items-center">
-            <Image src="/fluxcars_logo.webp" alt="FluxCars" width={140} height={40} className="h-10 w-auto object-contain brightness-0 invert" priority />
+            <Image src="/fluxcars_logo.webp" alt="FluxCars" width={140} height={40} className="h-8 w-auto object-contain brightness-0 invert sm:h-10" priority />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">
             {navItems.map((item) => {
@@ -509,82 +509,65 @@ export default function HomePage() {
           </nav>
           <div className="flex items-center gap-3">
             <LanguageSwitch current="es" variant="dark" />
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-500 text-white">
+            <div className="hidden sm:block">
+              <Button asChild size="lg" className="bg-[var(--luxury-gold)] text-stone-950 hover:bg-[#f0c978]">
               <Link href="#contacts">Convertirse en socio</Link>
             </Button>
+            </div>
           </div>
         </div>
       </header>
 
-      <section id="top" className="container-shell section-space pt-14 sm:pt-20 lg:pt-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <AnimatedSection className="space-y-8">
-            <span className="eyebrow">Plataforma B2B premium para negocios automotrices</span>
-            <div className="space-y-6">
-              <h1 className="max-w-4xl text-5xl leading-[0.98] font-semibold text-slate-950 sm:text-6xl lg:text-7xl">
+      <section id="top" className="container-shell pt-8 pb-16 sm:pt-12 lg:pt-16">
+        <div className="hero-cover">
+          <Image
+            src="/hero-premium-car.jpg"
+            alt="Vista frontal de un auto premium negro"
+            width={1600}
+            height={2000}
+            priority
+            sizes="100vw"
+            className="hero-cover__image"
+          />
+          <div className="relative z-10 grid min-h-[inherit] content-between gap-6 p-5 sm:gap-10 sm:p-9 lg:p-12">
+            <div className="max-w-4xl space-y-5 sm:space-y-7">
+              <span className="eyebrow">Plataforma B2B premium para negocios automotrices</span>
+              <h1 className="text-4xl leading-[0.94] font-semibold text-[var(--luxury-cream)] sm:text-7xl lg:text-8xl">
                 Lanza tu negocio automotriz con FluxCars
               </h1>
-              <p className="max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
-                Una website lista para lanzar en tu idioma, decenas de miles de autos desde China, actualizaciones del catálogo,
-                entrega internacional, infraestructura de pagos, Google Ads, correo corporativo e integración con CRM.
+              <p className="max-w-2xl text-base leading-7 text-stone-200/78 sm:text-xl sm:leading-8">
+                Una website lista para lanzar en tu idioma, catálogo vivo de vehículos desde China, logística,
+                infraestructura de pagos, Google Ads, correo corporativo e integración con CRM en un solo modelo.
               </p>
-            </div>
-
-            <div className="premium-panel max-w-3xl p-6 sm:p-8">
-              <p className="text-lg leading-8 font-medium text-slate-900 sm:text-xl">
-                Tú te enfocas en la promoción y en atender clientes. Nosotros gestionamos la plataforma, las actualizaciones
-                de la website, la logística y la infraestructura de las transacciones.
-              </p>
-            </div>
-
-            <BulletList items={heroBullets} />
-
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button asChild size="lg" className="bg-blue-700 px-8 hover:bg-blue-800">
-                <Link href="#contacts">
-                  Convertirse en socio
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary" className="border-slate-200 bg-white/80 px-8">
-                <Link href="#contacts">Obtener condiciones</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.12} className="premium-panel relative overflow-hidden p-6 sm:p-8 lg:p-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(21,93,252,0.14),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(235,243,255,0.88))]" />
-            <div className="relative space-y-6">
-              <div className="flex items-center justify-between rounded-[28px] border border-blue-100 bg-white/80 px-5 py-4">
-                <div>
-                  <p className="text-xs font-semibold tracking-[0.22em] text-blue-700 uppercase">Base de lanzamiento</p>
-                  <p className="mt-2 text-xl font-semibold text-slate-950">Business model, website, logistics</p>
-                </div>
-                <div className="rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white">B2B</div>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Button asChild size="lg" className="bg-[var(--luxury-gold)] px-8 text-stone-950 hover:bg-[#f0c978]">
+                  <Link href="#contacts">
+                    Convertirse en socio
+                    <ArrowRight className="size-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="secondary" className="border-[#d8b36a55] bg-stone-950/45 px-8 text-stone-100 hover:bg-stone-900/80">
+                  <Link href="#how-it-works">Ver el modelo</Link>
+                </Button>
               </div>
+            </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                {launchStackItems.map(({ title, icon: Icon, iconWrapClass }) => (
-                  <div
-                    key={title}
-                    className="rounded-[24px] border border-white/90 bg-[linear-gradient(170deg,rgba(255,255,255,0.98)_0%,rgba(245,248,255,0.9)_100%)] p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
-                  >
-                    <div className={`mb-4 flex size-11 items-center justify-center rounded-2xl ${iconWrapClass}`}>
-                      <Icon className="size-5" />
-                    </div>
-                    <p className="text-base leading-7 font-medium text-slate-900">{title}</p>
+            <div className="grid gap-3 sm:gap-4 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
+              <div className="hero-glass-card max-w-xl">
+                <p className="text-base leading-7 font-medium text-stone-100 sm:text-lg sm:leading-8">
+                  Tú vendes y construyes la marca local. FluxCars opera la website, el catálogo, la logística,
+                  las transacciones, la publicidad y las integraciones.
+                </p>
+              </div>
+              <div className="grid gap-2 sm:grid-cols-4 sm:gap-3">
+                {heroBullets.map((item) => (
+                  <div key={item} className="hero-metric">
+                    <p className="text-sm leading-5 font-semibold text-stone-100 sm:leading-6">{item}</p>
                   </div>
                 ))}
               </div>
-
-              <div className="rounded-[28px] bg-slate-950 p-6 text-white">
-                <p className="text-sm font-semibold tracking-[0.22em] text-blue-200 uppercase">Country exclusivity</p>
-                <p className="mt-3 text-2xl leading-tight font-semibold">
-                  One partner in one country, with no internal competition and a ready foundation for growth.
-                </p>
-              </div>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
@@ -610,7 +593,7 @@ export default function HomePage() {
           {benefitCards.map(({ title, text, icon: Icon }, index) => (
             <Card key={title} className={index % 3 === 0 ? "bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(232,241,255,0.9))]" : ""}>
               <CardHeader className="space-y-5">
-                <div className="flex size-12 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-[0_18px_40px_rgba(16,71,200,0.28)]">
+                <div className="flex size-12 items-center justify-center rounded-2xl bg-[var(--luxury-gold)] text-stone-950 shadow-[0_18px_40px_rgba(216,179,106,0.2)]">
                   <Icon className="size-5" />
                 </div>
                 <CardTitle>{title}</CardTitle>
@@ -627,7 +610,7 @@ export default function HomePage() {
         <div className="premium-panel p-8 sm:p-10 lg:p-14">
           <SectionHeading eyebrow="Modelo operativo" title="Un modelo operativo simple" />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <Card className="overflow-hidden border-blue-100/90 bg-[linear-gradient(165deg,rgba(242,247,255,0.98)_0%,rgba(255,255,255,0.93)_100%)] shadow-[0_24px_60px_rgba(16,71,200,0.1)]">
+            <Card className="overflow-hidden border-[#d8b36a2e]/90 bg-[linear-gradient(165deg,rgba(37,31,23,0.96)_0%,rgba(15,13,10,0.9)_100%)] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
               <CardHeader>
                 <CardTitle className="text-2xl">Qué hace FluxCars</CardTitle>
                 <CardDescription className="text-slate-600">Infraestructura, plataforma y operaciones</CardDescription>
@@ -681,11 +664,11 @@ export default function HomePage() {
         <div className="premium-panel grid gap-10 overflow-hidden p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
           <div className="space-y-6">
             <span className="eyebrow">Exclusividad</span>
-            <h2 className="section-title">Un socio por país</h2>
+            <h2 className="section-title">Un socio por región</h2>
             <p className="section-copy">
-              No vendemos el mismo modelo a varios jugadores dentro de un mismo mercado. Un país — un socio FluxCars.
+              No vendemos el mismo modelo a varios jugadores dentro de un mismo mercado. Una región — un socio FluxCars.
             </p>
-            <p className="text-lg leading-8 font-medium text-blue-700">La disponibilidad está limitada por geografía.</p>
+            <p className="text-lg leading-8 font-medium text-[#d8b36a]">La disponibilidad está limitada por región.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {exclusivityItems.map(({ title, icon: Icon, iconWrapClass }) => (
@@ -733,15 +716,15 @@ export default function HomePage() {
             return (
             <div
               key={step.title}
-              className="group relative overflow-hidden rounded-[30px] border border-blue-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(239,246,255,0.92)_100%)] p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(21,93,252,0.16)] sm:p-7"
+              className="group relative overflow-hidden rounded-[30px] border border-[#d8b36a2e]/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(239,246,255,0.92)_100%)] p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(21,93,252,0.16)] sm:p-7"
             >
               <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.2),transparent_62%)]" />
               <div className="relative flex h-full flex-col">
                 <div className="mb-5 flex items-center justify-between gap-4">
-                  <div className="flex size-14 items-center justify-center rounded-2xl border border-white/70 bg-white text-blue-700 shadow-[0_12px_30px_rgba(59,130,246,0.14)]">
+                  <div className="flex size-14 items-center justify-center rounded-2xl border border-white/70 bg-white text-[#d8b36a] shadow-[0_12px_30px_rgba(216,179,106,0.18)]">
                     <StepIcon className="size-6" />
                   </div>
-                  <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[11px] font-semibold tracking-[0.18em] text-blue-700 uppercase">
+                  <span className="rounded-full border border-[#d8b36a2e] bg-stone-900/70 px-3 py-1 text-[11px] font-semibold tracking-[0.18em] text-[#d8b36a] uppercase">
                     Paso de lanzamiento
                   </span>
                 </div>
@@ -787,7 +770,7 @@ export default function HomePage() {
           <Accordion type="single" collapsible className="divide-y divide-slate-200/70">
             {faqItems.map((item) => (
               <AccordionItem key={item.question} value={item.question} className="border-none">
-                <AccordionTrigger className="text-lg text-slate-950 hover:text-blue-700">
+                <AccordionTrigger className="text-lg text-slate-950 hover:text-[#d8b36a]">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="max-w-3xl text-base leading-7 text-slate-600">
@@ -800,7 +783,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="container-shell section-space">
-        <div className="overflow-hidden rounded-[36px] border border-blue-100 bg-[linear-gradient(135deg,#0f172a_0%,#10348b_55%,#155dfc_100%)] px-8 py-10 text-white shadow-[0_30px_100px_rgba(16,71,200,0.32)] sm:px-10 lg:px-14 lg:py-14">
+        <div className="overflow-hidden rounded-[36px] border border-[#d8b36a2e] bg-[linear-gradient(135deg,#15110d_0%,#2a1d12_55%,#8f4a22_100%)] px-8 py-10 text-white shadow-[0_30px_100px_rgba(0,0,0,0.42)] sm:px-10 lg:px-14 lg:py-14">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div className="space-y-6">
               <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-[0.22em] uppercase">
@@ -809,7 +792,7 @@ export default function HomePage() {
                 <h2 className="max-w-4xl text-4xl leading-[1.02] font-semibold sm:text-5xl lg:text-6xl">
                   Lanza tu negocio automotriz con FluxCars
                 </h2>
-              <p className="max-w-3xl text-base leading-8 text-blue-50/88 sm:text-lg">
+              <p className="max-w-3xl text-base leading-8 text-stone-100/82 sm:text-lg">
                 Obtén una website en el idioma correcto, decenas de miles de ofertas del mercado chino, un catálogo
                 actualizado, logística internacional, entrega a cualquier parte del mundo, infraestructura de pagos,
                 correo corporativo, Google Ads e integración con CRM.
@@ -820,10 +803,10 @@ export default function HomePage() {
                 No gastes cientos de miles para lanzar desde cero. Usa la plataforma FluxCars lista y enfócate en las
                 ventas.
               </p>
-              <p className="text-lg leading-8 font-medium text-blue-100">
-                Un socio por país. Los cupos son limitados.
+              <p className="text-lg leading-8 font-medium text-[#f5e6c7]">
+                Un socio por región. Los cupos son limitados.
               </p>
-              <Button asChild size="lg" className="bg-white px-8 text-slate-950 hover:bg-blue-50">
+              <Button asChild size="lg" className="bg-white px-8 text-slate-950 hover:bg-stone-900/70">
                 <Link href="#contacts">Obtener condiciones de alianza</Link>
               </Button>
             </div>
@@ -837,7 +820,7 @@ export default function HomePage() {
             <span className="eyebrow">Contacto</span>
             <h2 className="section-title">Deja una solicitud y hablemos del lanzamiento en tu mercado</h2>
             <p className="section-copy">
-              Cuéntanos sobre tu país, empresa y formato del proyecto. Te contactaremos para hablar de las condiciones
+              Cuéntanos sobre tu región, empresa y formato del proyecto. Te contactaremos para hablar de las condiciones
               de la alianza, el lanzamiento y la exclusividad del mercado.
             </p>
             <div className="grid gap-4">
@@ -847,7 +830,7 @@ export default function HomePage() {
                 { text: "Hablamos de exclusividad de mercado", icon: ShieldCheck },
               ].map(({ text, icon: Icon }) => (
                 <div key={text} className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/75 px-4 py-4">
-                  <Icon className="mt-1 size-5 text-blue-700" />
+                  <Icon className="mt-1 size-5 text-[#d8b36a]" />
                   <p className="text-base leading-7 text-slate-700">{text}</p>
                 </div>
               ))}
@@ -859,23 +842,23 @@ export default function HomePage() {
       </AnimatedSection>
 
       <footer className="container-shell section-space pt-8">
-        <div className="overflow-hidden rounded-[34px] border border-slate-800/70 bg-[linear-gradient(145deg,#0f172a_0%,#111827_45%,#1e293b_100%)] p-8 text-slate-100 shadow-[0_26px_90px_rgba(2,6,23,0.45)] sm:p-10">
+        <div className="overflow-hidden rounded-[34px] border border-[#d8b36a24] bg-[linear-gradient(145deg,#15110d_0%,#211912_45%,#090807_100%)] p-8 text-slate-100 shadow-[0_26px_90px_rgba(2,6,23,0.45)] sm:p-10">
           <div className="grid gap-8 lg:grid-cols-4">
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">English speaking support</h3>
-              <a href="https://wa.me/447822032515" className="inline-flex items-center gap-2 text-base font-medium text-white hover:text-blue-200">
+              <h3 className="text-sm font-semibold tracking-[0.16em] text-[#ead3a1] uppercase">English speaking support</h3>
+              <a href="tel:+447822032515" className="inline-flex items-center gap-2 text-base font-medium text-white hover:text-[#ead3a1]">
                 <PhoneCall className="size-4" />
-                +44 7822 032515 (WhatsApp)
+                +44 7822 032515
               </a>
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">China</h3>
-              <p className="text-base leading-7 text-slate-100">+86 150 2112 5206 (WeChat, WhatsApp, Viber)</p>
+              <h3 className="text-sm font-semibold tracking-[0.16em] text-[#ead3a1] uppercase">China</h3>
+              <p className="text-base leading-7 text-slate-100">+86 150 2112 5206 (WeChat, Viber)</p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">Sobre la empresa</h3>
+              <h3 className="text-sm font-semibold tracking-[0.16em] text-[#ead3a1] uppercase">Sobre la empresa</h3>
               <p className="text-base leading-7 text-slate-100">Hefei Accord Import and Export Co., LTD</p>
               <p className="text-sm leading-6 text-slate-300">
                 Legal address: Floor 12, 6-9, 11-14, Building B, No. 188, Shangcheng Avenue, Futian District, Yiwu,
@@ -885,13 +868,13 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold tracking-[0.16em] text-blue-200 uppercase">Canales de contacto</h3>
+              <h3 className="text-sm font-semibold tracking-[0.16em] text-[#ead3a1] uppercase">Canales de contacto</h3>
               <div className="grid gap-3">
                 <a
                   href="https://t.me/chinamotor_bot"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-blue-400/30 bg-blue-500/15 px-4 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-500/25"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#d8b36a55] bg-[#d8b36a1f] px-4 py-3 text-sm font-semibold text-[#f5e6c7] transition hover:bg-[#d8b36a33]"
                 >
                   <Send className="size-4" />
                   Telegram
@@ -900,19 +883,10 @@ export default function HomePage() {
                   href="https://connect.viber.com/ru/business/467d53c8-1703-11f0-b10f-36482bc6d4ae"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-violet-300/35 bg-violet-500/15 px-4 py-3 text-sm font-semibold text-violet-100 transition hover:bg-violet-500/25"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#d8b36a55] bg-[#d8b36a1f] px-4 py-3 text-sm font-semibold text-[#f4d99b] transition hover:bg-[#d8b36a30]"
                 >
                   <MessageCircle className="size-4" />
                   Viber
-                </a>
-                <a
-                  href="https://wa.me/447822032515"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-emerald-300/35 bg-emerald-500/15 px-4 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-500/25"
-                >
-                  <PhoneCall className="size-4" />
-                  WhatsApp
                 </a>
               </div>
             </div>
